@@ -1,0 +1,2113 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://rawcdn.githack.com/python-visualization/folium/master/folium/templates/leaflet.awesome.rotate.css"/>
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_12ffd943db8043e1832581751bd003f2 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+</head>
+<body>    
+    
+            <div class="folium-map" id="map_12ffd943db8043e1832581751bd003f2" ></div>
+        
+    
+
+	<!doctype html>
+	<html lang="en">
+	<head>
+	  <meta charset="utf-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1">
+	</head>
+	<body>
+
+	 
+	<div id='maplegend' class='maplegend' 
+		style='position: absolute; z-index:9999; border:2px solid grey; background-color:rgba(255, 255, 255, 0.8);
+		 border-radius:6px; padding: 10px; font-size:14px; right: 20px; bottom: 20px;'>
+		 
+	<div class='legend-title'>Legend</div>
+	<div class='legend-scale'>
+	  <ul class='legend-labels'>
+		<li><span style='background:green;opacity:0.7;'></span>Open</li>
+		<li><span style='background:orange;opacity:0.7;'></span>Partially Open</li>
+
+	  </ul>
+	</div>
+	</div>
+	 
+	</body>
+	</html>
+
+	<style type='text/css'>
+	  .maplegend .legend-title {
+		text-align: left;
+		margin-bottom: 5px;
+		font-weight: bold;
+		font-size: 90%;
+		}
+	  .maplegend .legend-scale ul {
+		margin: 0;
+		margin-bottom: 5px;
+		padding: 0;
+		float: left;
+		list-style: none;
+		}
+	  .maplegend .legend-scale ul li {
+		font-size: 80%;
+		list-style: none;
+		margin-left: 0;
+		line-height: 18px;
+		margin-bottom: 2px;
+		}
+	  .maplegend ul.legend-labels li span {
+		display: block;
+		float: left;
+		height: 16px;
+		width: 30px;
+		margin-right: 5px;
+		margin-left: 0;
+		border: 1px solid #999;
+		}
+	  .maplegend .legend-source {
+		font-size: 80%;
+		color: #777;
+		clear: both;
+		}
+	  .maplegend a {
+		color: #777;
+		}
+	</style>
+	
+</body>
+<script>    
+    
+            var map_12ffd943db8043e1832581751bd003f2 = L.map(
+                "map_12ffd943db8043e1832581751bd003f2",
+                {
+                    center: [40.015, -105.2705],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 4,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_47da71ebaa8c49109fa8ce5c12bf9bbd = L.tileLayer(
+                "https://stamen-tiles-{s}.a.ssl.fastly.net/terrain/{z}/{x}/{y}.jpg",
+                {"attribution": "Map tiles by \u003ca href=\"http://stamen.com\"\u003eStamen Design\u003c/a\u003e, under \u003ca href=\"http://creativecommons.org/licenses/by/3.0\"\u003eCC BY 3.0\u003c/a\u003e. Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://creativecommons.org/licenses/by-sa/3.0\"\u003eCC BY SA\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_12ffd943db8043e1832581751bd003f2);
+        
+    
+            var feature_group_0f4edcbc20f0469eac6b492c3bd7c3a8 = L.featureGroup(
+                {}
+            ).addTo(map_12ffd943db8043e1832581751bd003f2);
+        
+    
+            var marker_99c5824e9a8948b5a41bf3d558e80a98 = L.marker(
+                [29.29817767, -103.2297897],
+                {"name": "open"}
+            ).addTo(feature_group_0f4edcbc20f0469eac6b492c3bd7c3a8);
+        
+    
+            var icon_b3b0c4c59bfd42758fde025512791185 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tree", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_99c5824e9a8948b5a41bf3d558e80a98.setIcon(icon_b3b0c4c59bfd42758fde025512791185);
+        
+    
+        var popup_d82ab58da8bd4348a779a381012912f3 = L.popup({"maxWidth": 500});
+
+        
+            var html_925331d2a9904712a0e8e33c2c11bf26 = $(`<div id="html_925331d2a9904712a0e8e33c2c11bf26" style="width: 100.0%; height: 100.0%;"><strong><font size="+1">Big Bend</font></strong><br/><u>Big Bend Open</u><br/>Big Bend National Park is open. All paved roads, some improved dirt roads, and many frontcountry hiking trails are open for desert exploration. Camping and lodging at reduced capacity. Details:<br/><i><a href=https://www.nps.gov/bibe/planyourvisit/big-bend-covid-19-status-updates.htm>Alert Information</i></a><br/><a href=https://www.nps.gov/bibe/index.htm>Visit the NPS Website for More Information</a></div>`)[0];
+            popup_d82ab58da8bd4348a779a381012912f3.setContent(html_925331d2a9904712a0e8e33c2c11bf26);
+        
+
+        marker_99c5824e9a8948b5a41bf3d558e80a98.bindPopup(popup_d82ab58da8bd4348a779a381012912f3)
+        ;
+
+        
+    
+    
+            var marker_6870ad3029ca435586360b64f573e018 = L.marker(
+                [42.94065854, -122.1338414],
+                {"name": "open"}
+            ).addTo(feature_group_0f4edcbc20f0469eac6b492c3bd7c3a8);
+        
+    
+            var icon_160c88384c91474fbb7365cd592c6862 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tree", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_6870ad3029ca435586360b64f573e018.setIcon(icon_160c88384c91474fbb7365cd592c6862);
+        
+    
+        var popup_1d52d705882c456a930f39b594a48915 = L.popup({"maxWidth": 500});
+
+        
+            var html_613dae0221884559a7a360fdb9b6e116 = $(`<div id="html_613dae0221884559a7a360fdb9b6e116" style="width: 100.0%; height: 100.0%;"><strong><font size="+1">Crater Lake</font></strong><br/><u>Increased Recreational Access to Begin June 8, 2020</u><br/>Crater Lake National Park will begin to increase recreational access and services on a limited basis beginning on Monday, June 8, 2020.<br/><i><a href=https://www.nps.gov/crla/learn/news/crater-lake-national-park-begins-to-increase-recreational-access.htm>Alert Information</i></a><br/><a href=https://www.nps.gov/crla/index.htm>Visit the NPS Website for More Information</a></div>`)[0];
+            popup_1d52d705882c456a930f39b594a48915.setContent(html_613dae0221884559a7a360fdb9b6e116);
+        
+
+        marker_6870ad3029ca435586360b64f573e018.bindPopup(popup_1d52d705882c456a930f39b594a48915)
+        ;
+
+        
+    
+    
+            var marker_061f82e04b77463b893223270c600592 = L.marker(
+                [48.68414678, -113.8009306],
+                {"name": "open"}
+            ).addTo(feature_group_0f4edcbc20f0469eac6b492c3bd7c3a8);
+        
+    
+            var icon_b8ccc6640bdf40ae9a140d63618fe36d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tree", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_061f82e04b77463b893223270c600592.setIcon(icon_b8ccc6640bdf40ae9a140d63618fe36d);
+        
+    
+        var popup_34be4523937e439cab1d25d6e137b9d4 = L.popup({"maxWidth": 500});
+
+        
+            var html_825f6a6a522c465fbb39a7289beac703 = $(`<div id="html_825f6a6a522c465fbb39a7289beac703" style="width: 100.0%; height: 100.0%;"><strong><font size="+1">Glacier</font></strong><br/><u>Many Glacier Road Construction</u><br/>Visitors will encounter closures and long travel delays in Many Glacier in 2020 and 2021 due to large-scale road construction projects.<br/><i><a href=https://www.nps.gov/glac/planyourvisit/manyglacier.htm>Alert Information</i></a><br/><u>Increased Recreational Access Begins June 8 and COVID-19 Phased Reopening Plan is Released</u><br/>Glacier National Park is increasing recreational access and services on a limited basis on June 8.<br/><i><a href=https://www.nps.gov/glac/planyourvisit/statusupdate.htm>Alert Information</i></a><br/><a href=https://www.nps.gov/glac/index.htm>Visit the NPS Website for More Information</a></div>`)[0];
+            popup_34be4523937e439cab1d25d6e137b9d4.setContent(html_825f6a6a522c465fbb39a7289beac703);
+        
+
+        marker_061f82e04b77463b893223270c600592.bindPopup(popup_34be4523937e439cab1d25d6e137b9d4)
+        ;
+
+        
+    
+    
+            var marker_3d6d6c1eddf347a5bc5b8d93e28ed6b1 = L.marker(
+                [43.81853565, -110.7054666],
+                {"name": "open"}
+            ).addTo(feature_group_0f4edcbc20f0469eac6b492c3bd7c3a8);
+        
+    
+            var icon_f0411afbf4ca445b9420488c51032a89 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tree", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_3d6d6c1eddf347a5bc5b8d93e28ed6b1.setIcon(icon_f0411afbf4ca445b9420488c51032a89);
+        
+    
+        var popup_9ee9e9aafa05411780c0c9c35fca20e2 = L.popup({"maxWidth": 500});
+
+        
+            var html_453e403f1b4f49549aea7c25f875277f = $(`<div id="html_453e403f1b4f49549aea7c25f875277f" style="width: 100.0%; height: 100.0%;"><strong><font size="+1">Grand Teton</font></strong><br/><u>Backcountry Camping is Not Allowed at this Time</u><br/>Backcountry camping is not allowed in the park at this time. Permits anticipated to be available in mid-June when visitor centers open. Day hiking is allowed. Be prepared for wet and snowy trail conditions. Pack it in, pack it out.<br/><i><a href=https://www.nps.gov/grte/planyourvisit/be-tetonsafe-be-outside.htm>Alert Information</i></a><br/><u>Phased Reopening - Some Facilities and Services are Open</u><br/>Some facilities and services have opened for the season including some campgrounds, take-out food service, and restrooms. Park waters have opened.  Check the link for information on current closures and status.<br/><i><a href=https://www.nps.gov/grte/planyourvisit/be-tetonsafe-be-outside.htm>Alert Information</i></a><br/><a href=https://www.nps.gov/grte/index.htm>Visit the NPS Website for More Information</a></div>`)[0];
+            popup_9ee9e9aafa05411780c0c9c35fca20e2.setContent(html_453e403f1b4f49549aea7c25f875277f);
+        
+
+        marker_3d6d6c1eddf347a5bc5b8d93e28ed6b1.bindPopup(popup_9ee9e9aafa05411780c0c9c35fca20e2)
+        ;
+
+        
+    
+    
+            var marker_b7cef8aecb0b48ff994e1277d243e7b6 = L.marker(
+                [34.98387664, -109.7877678],
+                {"name": "open"}
+            ).addTo(feature_group_0f4edcbc20f0469eac6b492c3bd7c3a8);
+        
+    
+            var icon_0dc32d6c74d14deba88ff3b828a3798f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tree", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_b7cef8aecb0b48ff994e1277d243e7b6.setIcon(icon_0dc32d6c74d14deba88ff3b828a3798f);
+        
+    
+        var popup_b4703aff99dd459a8f2ee80170318110 = L.popup({"maxWidth": 500});
+
+        
+            var html_6f4e833a0bf747c6af51ba290f2ff881 = $(`<div id="html_6f4e833a0bf747c6af51ba290f2ff881" style="width: 100.0%; height: 100.0%;"><strong><font size="+1">Petrified Forest</font></strong><br/><u>The Park Road is Open!</u><br/>Petrified Forest National Park’s road, trails, and backcountry are open, daily 8am to 5pm. The north visitor center and complex are open as well, although the south visitor center and historic inn have not reopened yet.<br/><i><a href=https://www.nps.gov/pefo/learn/news/pefo-increase-recreational-access.htm>Alert Information</i></a><br/><u>Road Delays - April 12th, 2020 - Late June, 2020</u><br/>Phase 2 of FHWA Road and Bridge Rehab project. Jasper Forest, Agate Bridge, and park road is open. Expect up to 15 minute delays in construction zone.<br/><i><a href=https://www.nps.gov/pefo/planyourvisit/road-closures.htm>Alert Information</i></a><br/><u>No Overnight Stays in the Park</u><br/>Although you can day hike, the park does not have overnight stays yet. There are no permits available to backpack and camp in the wilderness right now.<br/><u>Credit Cards Only at the Entrance Station</u><br/>Credit Cards are the only means of payment at both the entrances of Petrified Forest National Park.<br/><a href=https://www.nps.gov/pefo/index.htm>Visit the NPS Website for More Information</a></div>`)[0];
+            popup_b4703aff99dd459a8f2ee80170318110.setContent(html_6f4e833a0bf747c6af51ba290f2ff881);
+        
+
+        marker_b7cef8aecb0b48ff994e1277d243e7b6.bindPopup(popup_b4703aff99dd459a8f2ee80170318110)
+        ;
+
+        
+    
+    
+            var marker_0881569489ab4bb8940a9ae202df1e38 = L.marker(
+                [38.49236644, -78.46907715],
+                {"name": "open"}
+            ).addTo(feature_group_0f4edcbc20f0469eac6b492c3bd7c3a8);
+        
+    
+            var icon_7b929618d0d0422ab28df448c0fdea84 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tree", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_0881569489ab4bb8940a9ae202df1e38.setIcon(icon_7b929618d0d0422ab28df448c0fdea84);
+        
+    
+        var popup_ddbd2f03aeab4e7b9eaeb4112fe1821e = L.popup({"maxWidth": 500});
+
+        
+            var html_033eddd44e434dd098d920aa2a1dad3e = $(`<div id="html_033eddd44e434dd098d920aa2a1dad3e" style="width: 100.0%; height: 100.0%;"><strong><font size="+1">Shenandoah</font></strong><br/><u>Phased Reopening - most amenities open</u><br/>Shenandoah National Park has begun Phase Two.<br/><i><a href=https://www.nps.gov/shen/phase-two.htm>Alert Information</i></a><br/><u>Powerline Trimming</u><br/>There will be aerial tree trimming along the powerline right of way (ROW) that passes through the Big Meadows and Rapidan Camp area, mile 51 Skyline Drive, and the Elkwallow, Piney River, and Mathews Arm areas, mile 22.2 - 24.0.<br/><i><a href=https://www.nps.gov/shen/planyourvisit/alerts.htm>Alert Information</i></a><br/><a href=https://www.nps.gov/shen/index.htm>Visit the NPS Website for More Information</a></div>`)[0];
+            popup_ddbd2f03aeab4e7b9eaeb4112fe1821e.setContent(html_033eddd44e434dd098d920aa2a1dad3e);
+        
+
+        marker_0881569489ab4bb8940a9ae202df1e38.bindPopup(popup_ddbd2f03aeab4e7b9eaeb4112fe1821e)
+        ;
+
+        
+    
+    
+            var marker_ae0de68fd5cb48a6b3982d7f992757ac = L.marker(
+                [44.59824417, -110.5471695],
+                {"name": "open"}
+            ).addTo(feature_group_0f4edcbc20f0469eac6b492c3bd7c3a8);
+        
+    
+            var icon_d70ad86ac2cd44939a6c7219d0cfa119 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tree", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_ae0de68fd5cb48a6b3982d7f992757ac.setIcon(icon_d70ad86ac2cd44939a6c7219d0cfa119);
+        
+    
+        var popup_0cdeeb15cc074968a1d3b2a7b38fbc1e = L.popup({"maxWidth": 500});
+
+        
+            var html_7a73b0fff2fa422e86303b0bfd2a2205 = $(`<div id="html_7a73b0fff2fa422e86303b0bfd2a2205" style="width: 100.0%; height: 100.0%;"><strong><font size="+1">Yellowstone</font></strong><br/><u>Information about current park status and available services/facilities</u><br/>Yellowstone National Park opened its Wyoming entrances May 18 and its Montana entrances June 1. Limited services and facilities are available in the park.<br/><i><a href=https://www.nps.gov/yell/learn/news/20021.htm>Alert Information</i></a><br/><a href=https://www.nps.gov/yell/index.htm>Visit the NPS Website for More Information</a></div>`)[0];
+            popup_0cdeeb15cc074968a1d3b2a7b38fbc1e.setContent(html_7a73b0fff2fa422e86303b0bfd2a2205);
+        
+
+        marker_ae0de68fd5cb48a6b3982d7f992757ac.bindPopup(popup_0cdeeb15cc074968a1d3b2a7b38fbc1e)
+        ;
+
+        
+    
+    
+            var feature_group_1e31b61cffaf4b0f888af4b48c7c5174 = L.featureGroup(
+                {}
+            ).addTo(map_12ffd943db8043e1832581751bd003f2);
+        
+    
+            var marker_87f493ae918c4a799727d7f7ff34a30d = L.marker(
+                [44.30777545, -68.30063316],
+                {"name": "other"}
+            ).addTo(feature_group_1e31b61cffaf4b0f888af4b48c7c5174);
+        
+    
+            var icon_f69b91f259fe4332913d44fae99ae5e8 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tree", "iconColor": "white", "markerColor": "orange", "prefix": "fa"}
+            );
+            marker_87f493ae918c4a799727d7f7ff34a30d.setIcon(icon_f69b91f259fe4332913d44fae99ae5e8);
+        
+    
+        var popup_c1b769a5a64042a5a3a5d84246f31eb0 = L.popup({"maxWidth": 500});
+
+        
+            var html_99d0884d71794f82a0e9cca8372dcd54 = $(`<div id="html_99d0884d71794f82a0e9cca8372dcd54" style="width: 100.0%; height: 100.0%;"><strong><font size="+1">Acadia</font></strong><br/><u>Wildlife Closure: Several Trails Are Off Limits During Peregrine Falcon Nesting Period</u><br/>The Precipice Trail, Jordan Cliffs Trail, Valley Cove Trail, and a portion of the Orange & Black Path are closed to public entry until further notice. Park staff have observed adult peregrine falcons engaging in courtship and pre-nesting behavior.<br/><i><a href=https://www.nps.gov/acad/planyourvisit/conditions.htm>Alert Information</i></a><br/><u>Bass Harbor Head Light closed to public on Wed June 17</u><br/>All roads and trails associated with the Bass Harbor Head Light complex will be closed entirely to the public for a complex maintenance project on Thu June 18.<br/><u>Island Explorer bus service postponed for pandemic</u><br/>Island Explorer fare-free bus service for Acadia National Park and surrounding communities has been postponed indefinitely in response to the COVID-19 pandemic.<br/><i><a href=http://www.downeasttrans.org/index.htm>Alert Information</i></a><br/><u>Carriage Roads open to pedestrians only</u><br/>Acadia's carriage roads are open for pedestrian use only as crews continue work on blow downs, trenches and other hazards caused by winter storms. Bicycle and equestrian use are prohibited until repairs are completed.<br/><i><a href=https://www.nps.gov/acad/planyourvisit/conditions.htm>Alert Information</i></a><br/><u>COVID-19: Phased reopening underway</u><br/>The Park Loop Road and most hiking trails are open. Information stations are staffed outside main visitor center. Carriage Roads are closed to bicycles and horses. Campgrounds open no sooner than July 1. Gatherings of more than 50 people are prohibited.<br/><i><a href=https://www.nps.gov/acad/planyourvisit/conditions.htm>Alert Information</i></a><br/><u>Bass Harbor Head Light closed to public on Thu June 18</u><br/>All roads and trails associated with the Bass Harbor Head Light complex will be closed entirely to the public for a complex maintenance project on Thu June 18.<br/><a href=https://www.nps.gov/acad/index.htm>Visit the NPS Website for More Information</a></div>`)[0];
+            popup_c1b769a5a64042a5a3a5d84246f31eb0.setContent(html_99d0884d71794f82a0e9cca8372dcd54);
+        
+
+        marker_87f493ae918c4a799727d7f7ff34a30d.bindPopup(popup_c1b769a5a64042a5a3a5d84246f31eb0)
+        ;
+
+        
+    
+    
+            var marker_f97e0118ddcf4a9ea82d8f954371c83f = L.marker(
+                [29.53539777, -101.075821],
+                {"name": "other"}
+            ).addTo(feature_group_1e31b61cffaf4b0f888af4b48c7c5174);
+        
+    
+            var icon_a9a6c8ac1ec14ff589f2be318a8bc0b6 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tree", "iconColor": "white", "markerColor": "orange", "prefix": "fa"}
+            );
+            marker_f97e0118ddcf4a9ea82d8f954371c83f.setIcon(icon_a9a6c8ac1ec14ff589f2be318a8bc0b6);
+        
+    
+        var popup_a7e4fbaeb0e041e7ba4b601e7c93c913 = L.popup({"maxWidth": 500});
+
+        
+            var html_1b120bc3d12a466c94eeccb961c39b3e = $(`<div id="html_1b120bc3d12a466c94eeccb961c39b3e" style="width: 100.0%; height: 100.0%;"><strong><font size="+1">Amistad</font></strong><br/><u>Park Fees Resume</u><br/>May 29, 2020- Lake use passes are now required and can be purchased at automated fee machines located at Diablo East and Rough Canyon. Exchanges for annual passes bought at this time will be honored when Visitor Center reopens.<br/><u>Visitor Center Now Open</u><br/>June 12, 2020- Visitor Center will resume normal operating hours, seven days a week 8:00am-4:30pm. Visitors are encouraged to follow social distancing guidelines. Masks are recommended.<br/><i><a href=https://www.nps.gov/amis/planyourvisit/hours.htm>Alert Information</i></a><br/><u>Day Use Areas at Governors Landing and Spur 454 Now Open</u><br/>May 22, 2020- Governors Landing and Spur 454 to San Pedro Cliffs day use areas re-opened. Visitors are highly encouraged to social distance (at least 6 feet) from others. If visitors do not comply with the CDC guidelines, these areas may close again.<br/><u>Rough Canyon and Spur 406 Campgrounds Open</u><br/>June 1, 2020- Rough Canyon and Spur 406 campgrounds re-opened. Visitors are highly encouraged to social distance (at least 6 feet) from others. If visitors do not comply with the CDC guidelines, these areas may close again.<br/><u>Fishing Tournaments May Resume</u><br/>May 29, 2020- To schedule a fishing tournament date, please contact Ranger Activities Technician, Kaci Messenger, at kaci_messenger@nps.gov. <br/><u>Group Campground and Some Regular Campgrounds Closure</u><br/>June 12, 2020- In accordance with the President’s Coronavirus Guidelines for America and CDC regulations regarding COVID-19, group & some regular campgrounds will remain closed until further notice. For details please see the link provided.<br/><i><a href=https://www.nps.gov/amis/planyourvisit/hours.htm>Alert Information</i></a><br/><u>Closure of Picnic Areas</u><br/>May 21, 2020- Due to groups not maintaining social distance (at least 6 feet) from others, the picnic areas at the Viewpoint Cliffs, Rough Canyon, 277 North, 277 South, San Pedro Campground, Black Brush, and the Pecos are closed until further notice.<br/><u>Boat Ramps and Hiking Trails Remain Open</u><br/>May 1, 2020- Boat ramps & hiking trails remain open. Visitors are encouraged to follow CDC social distancing guidelines (keeping at least 6 ft from other visitors). Restrooms at Diablo East, Rough Canyon, Box Canyon, and Pecos boat ramps have re-opened.<br/><a href=https://www.nps.gov/amis/index.htm>Visit the NPS Website for More Information</a></div>`)[0];
+            popup_a7e4fbaeb0e041e7ba4b601e7c93c913.setContent(html_1b120bc3d12a466c94eeccb961c39b3e);
+        
+
+        marker_f97e0118ddcf4a9ea82d8f954371c83f.bindPopup(popup_a7e4fbaeb0e041e7ba4b601e7c93c913)
+        ;
+
+        
+    
+    
+            var marker_01a8b468a6854b77b641f2d387e2b763 = L.marker(
+                [38.72261844, -109.5863666],
+                {"name": "other"}
+            ).addTo(feature_group_1e31b61cffaf4b0f888af4b48c7c5174);
+        
+    
+            var icon_4a16262111904d59807684dd4822cd3d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tree", "iconColor": "white", "markerColor": "orange", "prefix": "fa"}
+            );
+            marker_01a8b468a6854b77b641f2d387e2b763.setIcon(icon_4a16262111904d59807684dd4822cd3d);
+        
+    
+        var popup_864c020f1ac54b36bfd7fff62d5b081e = L.popup({"maxWidth": 500});
+
+        
+            var html_d0635031d09643c68094727c05b218c0 = $(`<div id="html_d0635031d09643c68094727c05b218c0" style="width: 100.0%; height: 100.0%;"><strong><font size="+1">Arches</font></strong><br/><u>Phased Reopening - some locations still closed due to COVID-19</u><br/>We are increasing access to the park in a phased approach. Arches National Park roads, trails, park store, and restrooms are open. The visitor center and campground remain closed. Entrance fees are being collected at the entrance station.<br/><i><a href=https://www.nps.gov/arch/learn/news/news051120.htm>Alert Information</i></a><br/><u>Expect Traffic Congestion</u><br/>Parking lots and trails may be crowded. Avoid arriving 9 am to noon, when wait times at the entrance gate may exceed 30 minutes. When parking lots fill, staff may delay vehicles from entering the park for several hours.<br/><i><a href=https://www.nps.gov/arch/planyourvisit/traffic.htm>Alert Information</i></a><br/><u>Fee Collection Resumes</u><br/>As of Monday, June 15, Arches and Canyonlands will resume collecting park entrance fees. All park passes are available for purchase at park entrance stations.<br/><a href=https://www.nps.gov/arch/index.htm>Visit the NPS Website for More Information</a></div>`)[0];
+            popup_864c020f1ac54b36bfd7fff62d5b081e.setContent(html_d0635031d09643c68094727c05b218c0);
+        
+
+        marker_01a8b468a6854b77b641f2d387e2b763.bindPopup(popup_864c020f1ac54b36bfd7fff62d5b081e)
+        ;
+
+        
+    
+    
+            var marker_696f22a963e342d4aa77a758b0dd22ff = L.marker(
+                [43.68584846, -102.482942],
+                {"name": "other"}
+            ).addTo(feature_group_1e31b61cffaf4b0f888af4b48c7c5174);
+        
+    
+            var icon_f2e8334280804921bbe66e433127ecbe = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tree", "iconColor": "white", "markerColor": "orange", "prefix": "fa"}
+            );
+            marker_696f22a963e342d4aa77a758b0dd22ff.setIcon(icon_f2e8334280804921bbe66e433127ecbe);
+        
+    
+        var popup_266e344e38dd478f91e00524586a2f8d = L.popup({"maxWidth": 500});
+
+        
+            var html_d710ca09f4bf4135b9abfde1d8e7e9de = $(`<div id="html_d710ca09f4bf4135b9abfde1d8e7e9de" style="width: 100.0%; height: 100.0%;"><strong><font size="+1">Badlands</font></strong><br/><u>Resumption of Fee Collection</u><br/>Fee collection has resumed at the park, more information about fees can be found on the main fees and passes page.<br/><i><a href=https://www.nps.gov/badl/planyourvisit/fees.htm>Alert Information</i></a><br/><u>Fossil Exhibit Trail inaccessible</u><br/>Due to parking lot construction, Fossil Exhibit Trail is currently inaccessible.<br/><u>Phased reopening – some locations closed due to COVID-19</u><br/>We are working to increase access to the park in a phased approach. Trails, campgrounds, and roads in the north unit are open. Ben Reifel Visitor Center remains closed.  The south unit of the park is closed in accordance with Oglala Sioux Tribe ordinances<br/><i><a href=https://www.nps.gov/badl/planyourvisit/conditions.htm>Alert Information</i></a><br/><u>Bigfoot Pass Overlook inaccessible</u><br/>Due to construction, Bigfoot Pass overlook, parking lot, and picnic area are inaccessible.<br/><a href=https://www.nps.gov/badl/index.htm>Visit the NPS Website for More Information</a></div>`)[0];
+            popup_266e344e38dd478f91e00524586a2f8d.setContent(html_d710ca09f4bf4135b9abfde1d8e7e9de);
+        
+
+        marker_696f22a963e342d4aa77a758b0dd22ff.bindPopup(popup_266e344e38dd478f91e00524586a2f8d)
+        ;
+
+        
+    
+    
+            var marker_da94ed1cd7c04786ae04ad9173afc8f4 = L.marker(
+                [45.13154227, -108.1443943],
+                {"name": "other"}
+            ).addTo(feature_group_1e31b61cffaf4b0f888af4b48c7c5174);
+        
+    
+            var icon_d52518c4b5974ec392737c4a25a2d763 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tree", "iconColor": "white", "markerColor": "orange", "prefix": "fa"}
+            );
+            marker_da94ed1cd7c04786ae04ad9173afc8f4.setIcon(icon_d52518c4b5974ec392737c4a25a2d763);
+        
+    
+        var popup_92744c1e510b47268fc52fa45be6126e = L.popup({"maxWidth": 500});
+
+        
+            var html_6b742c7c3add4e9c8a5eff9a9b394c2a = $(`<div id="html_6b742c7c3add4e9c8a5eff9a9b394c2a" style="width: 100.0%; height: 100.0%;"><strong><font size="+1">Bighorn Canyon</font></strong><br/><u>2019 Novel Coronavirus (COVID-19) Response</u><br/>Closures as of June 5, 2020: North District, Fort Smith, MT: Ok-A-Beh Marina; Ok-A-Beh swim beach; Yellowtail Dam Visitor Center.   South District, Lovell, WY: Visitor Center and Horseshoe Bend swim beach.<br/><a href=https://www.nps.gov/bica/index.htm>Visit the NPS Website for More Information</a></div>`)[0];
+            popup_92744c1e510b47268fc52fa45be6126e.setContent(html_6b742c7c3add4e9c8a5eff9a9b394c2a);
+        
+
+        marker_da94ed1cd7c04786ae04ad9173afc8f4.bindPopup(popup_92744c1e510b47268fc52fa45be6126e)
+        ;
+
+        
+    
+    
+            var marker_08076d6b58894cbf9ff40d03f16fffc4 = L.marker(
+                [25.490587, -80.21023851],
+                {"name": "other"}
+            ).addTo(feature_group_1e31b61cffaf4b0f888af4b48c7c5174);
+        
+    
+            var icon_b8a1e56c1d3e4ad1ae69598256855b6e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tree", "iconColor": "white", "markerColor": "orange", "prefix": "fa"}
+            );
+            marker_08076d6b58894cbf9ff40d03f16fffc4.setIcon(icon_b8a1e56c1d3e4ad1ae69598256855b6e);
+        
+    
+        var popup_ea34f215eddd4999bec70b7cff10cd4a = L.popup({"maxWidth": 500});
+
+        
+            var html_4621bfeb091047249238ca2a09899b77 = $(`<div id="html_4621bfeb091047249238ca2a09899b77" style="width: 100.0%; height: 100.0%;"><strong><font size="+1">Biscayne</font></strong><br/><u>Coronavirus Boating Activity</u><br/>For further information about boating in Biscayne National Park, visit the Governor of the State of Florida's Excutive Orders<br/><i><a href=https://www.flgov.com/2020-executive-orders>Alert Information</i></a><br/><u>Coronavirus - Modification in Operations</u><br/>The kayak launch and restrooms at Convoy Point are open on a limited basis. Boca Chita, Elliott and Adams Keys are also open on a limited basis. The visitor center remains closed. Park waters remain open.<br/><u>Coronavirus - Modification in Operations March 21, 2020</u><br/>Rafting of marine vessels is prohibited until further notice in accordance with Miami-Dade County Emergency Order 08-20.<br/><u>Repair of Stiltsville Houses</u><br/>Because of damage to the Stiltsville houses after Hurricane Irma, public use of the houses is suspended until necessary repairs are made to the structures. All seven houses remain standing.<br/><i><a href=http://stiltsvilletrust.org/>Alert Information</i></a><br/><u>Precautions for Zika Virus</u><br/>There are no areas of ongoing, active transmission of Zika by mosquitoes in Florida, yet please take appropriate personal protection measures including the use of insect repellent and wearing long-sleeved shirts and long pants during your park visit.<br/><i><a href=https://www.nps.gov/articles/zika-virus.htm>Alert Information</i></a><br/><a href=https://www.nps.gov/bisc/index.htm>Visit the NPS Website for More Information</a></div>`)[0];
+            popup_ea34f215eddd4999bec70b7cff10cd4a.setContent(html_4621bfeb091047249238ca2a09899b77);
+        
+
+        marker_08076d6b58894cbf9ff40d03f16fffc4.bindPopup(popup_ea34f215eddd4999bec70b7cff10cd4a)
+        ;
+
+        
+    
+    
+            var marker_e3323a6228c24508944d0c9162921116 = L.marker(
+                [38.57779869, -107.7242756],
+                {"name": "other"}
+            ).addTo(feature_group_1e31b61cffaf4b0f888af4b48c7c5174);
+        
+    
+            var icon_70780c0f12b74f2aa9e7a327671bdd06 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tree", "iconColor": "white", "markerColor": "orange", "prefix": "fa"}
+            );
+            marker_e3323a6228c24508944d0c9162921116.setIcon(icon_70780c0f12b74f2aa9e7a327671bdd06);
+        
+    
+        var popup_a8b492d545d242c28ea06509e56696a4 = L.popup({"maxWidth": 500});
+
+        
+            var html_7ce4a1c3081d4fc5927be12243d675e5 = $(`<div id="html_7ce4a1c3081d4fc5927be12243d675e5" style="width: 100.0%; height: 100.0%;"><strong><font size="+1">Black Canyon Of The Gunnison</font></strong><br/><u>Covid-19 Closures</u><br/>South Rim Visitor Center is closed, but rangers are staffing a desk outside to issue permits, answer questions, and assist your visit. South Rim Drive, North Rim Drive and all viewpoints are open.<br/><u>Campgrounds Status</u><br/>South Rim - All loops OPEN, reservations strongly recommended for Loops A&B. North Rim - OPEN. East Portal - OPEN. Credit cards are the preferred method of payment for all campgrounds.<br/><u>Annual Climbing Closure</u><br/>The annual climbing closure for the protection of nesting Peregrine Falcons is in effect.<br/><i><a href=https://www.nps.gov/blca/planyourvisit/climbingclosures.htm>Alert Information</i></a><br/><a href=https://www.nps.gov/blca/index.htm>Visit the NPS Website for More Information</a></div>`)[0];
+            popup_a8b492d545d242c28ea06509e56696a4.setContent(html_7ce4a1c3081d4fc5927be12243d675e5);
+        
+
+        marker_e3323a6228c24508944d0c9162921116.bindPopup(popup_a8b492d545d242c28ea06509e56696a4)
+        ;
+
+        
+    
+    
+            var marker_ef70678cfb1a4eb0a703a8de3c40f468 = L.marker(
+                [37.58399144, -112.1826689],
+                {"name": "other"}
+            ).addTo(feature_group_1e31b61cffaf4b0f888af4b48c7c5174);
+        
+    
+            var icon_ac32693bcdc541fc984107c79fc79cb1 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tree", "iconColor": "white", "markerColor": "orange", "prefix": "fa"}
+            );
+            marker_ef70678cfb1a4eb0a703a8de3c40f468.setIcon(icon_ac32693bcdc541fc984107c79fc79cb1);
+        
+    
+        var popup_b0b111e547b6469da4a05720996dbb5a = L.popup({"maxWidth": 500});
+
+        
+            var html_514279fcda3a4e68bcae7579401c337f = $(`<div id="html_514279fcda3a4e68bcae7579401c337f" style="width: 100.0%; height: 100.0%;"><strong><font size="+1">Bryce Canyon</font></strong><br/><u>Phased reopening - some locations closed due to COVID-19</u><br/>Following the guidance of state and local public health authorities, Bryce Canyon is increasing recreational access and services. The park is open, but some services and activities are limited.<br/><i><a href=https://www.nps.gov/brca/planyourvisit/bryce-canyon-national-park-public-health-update.htm>Alert Information</i></a><br/><u>Annual Summer Festivals</u><br/>Following currently available guidance from the CDC and state and local public health authorities, the park has decided to cancel the Astronomy Festival scheduled for June 2020. A decision on the July Geology Fest will come the first week in June.<br/><i><a href=https://twitter.com/BryceCanyonNPS>Alert Information</i></a><br/><a href=https://www.nps.gov/brca/index.htm>Visit the NPS Website for More Information</a></div>`)[0];
+            popup_b0b111e547b6469da4a05720996dbb5a.setContent(html_514279fcda3a4e68bcae7579401c337f);
+        
+
+        marker_ef70678cfb1a4eb0a703a8de3c40f468.bindPopup(popup_b0b111e547b6469da4a05720996dbb5a)
+        ;
+
+        
+    
+    
+            var marker_67032e0d187c4a9fa3b56a1f4d1651a5 = L.marker(
+                [38.24555783, -109.8801624],
+                {"name": "other"}
+            ).addTo(feature_group_1e31b61cffaf4b0f888af4b48c7c5174);
+        
+    
+            var icon_4867fa07393d4c5b87753af81297522f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tree", "iconColor": "white", "markerColor": "orange", "prefix": "fa"}
+            );
+            marker_67032e0d187c4a9fa3b56a1f4d1651a5.setIcon(icon_4867fa07393d4c5b87753af81297522f);
+        
+    
+        var popup_0ac29b1ec0ee44a4a6cfcec2bd45a379 = L.popup({"maxWidth": 500});
+
+        
+            var html_432aca9b746844ee846f033641f22456 = $(`<div id="html_432aca9b746844ee846f033641f22456" style="width: 100.0%; height: 100.0%;"><strong><font size="+1">Canyonlands</font></strong><br/><u>Phased reopening - some locations still closed due to COVID-19</u><br/>We are increasing access to the park in a phased approach. Canyonlands National Park roads, trails, park stores, and restrooms are open. Visitor centers and campgrounds remain closed. Entrance fees are being collected at the park entrance station.<br/><i><a href=https://www.nps.gov/arch/learn/news/news051120.htm>Alert Information</i></a><br/><u>Expect Traffic Congestion</u><br/>Parking lots and trails may be crowded, especially at Island in the Sky. Wait times at the entrance gate may exceed 30 minutes. When parking lots fill, staff may need to delay vehicles from entering the park for several hours.<br/><u>Fee Collection Resumes</u><br/>As of Monday, June 15, Canyonlands and Arches resumed collecting park entrance fees. All park passes are available for purchase at park entrance stations.<br/><u>Mesa Arch parking lot to close June 18-19</u><br/>We are replacing the vault toilet at Mesa Arch trailhead in Island in the Sky with a larger model. The parking lot will close entirely June 18-19 to allow for installation of this structure.<br/><a href=https://www.nps.gov/cany/index.htm>Visit the NPS Website for More Information</a></div>`)[0];
+            popup_0ac29b1ec0ee44a4a6cfcec2bd45a379.setContent(html_432aca9b746844ee846f033641f22456);
+        
+
+        marker_67032e0d187c4a9fa3b56a1f4d1651a5.bindPopup(popup_0ac29b1ec0ee44a4a6cfcec2bd45a379)
+        ;
+
+        
+    
+    
+            var marker_d58db6c964784aa2adbbc82ff954aa6c = L.marker(
+                [33.99698333, -84.28953177],
+                {"name": "other"}
+            ).addTo(feature_group_1e31b61cffaf4b0f888af4b48c7c5174);
+        
+    
+            var icon_57e75da124ed4bdbb9d5b3e02b62aa44 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tree", "iconColor": "white", "markerColor": "orange", "prefix": "fa"}
+            );
+            marker_d58db6c964784aa2adbbc82ff954aa6c.setIcon(icon_57e75da124ed4bdbb9d5b3e02b62aa44);
+        
+    
+        var popup_1df4d1fc2dc348f98b2ee77564413aa1 = L.popup({"maxWidth": 500});
+
+        
+            var html_7faed7d924d240e792bcafd97befc18c = $(`<div id="html_7faed7d924d240e792bcafd97befc18c" style="width: 100.0%; height: 100.0%;"><strong><font size="+1">Chattahoochee River</font></strong><br/><u>Park Reopening All Parking Areas By May 18th</u><br/>Following guidance from the White House, Centers for Disease Control and Prevention, state, and local public health authorities, the park is increasing recreational access Saturday May 16th. Restrooms, picnic areas, & visitor center will remain closed.<br/><i><a href=https://www.nps.gov/chat/learn/news/park-increase-access-may18-htm.htm>Alert Information</i></a><br/><a href=https://www.nps.gov/chat/index.htm>Visit the NPS Website for More Information</a></div>`)[0];
+            popup_1df4d1fc2dc348f98b2ee77564413aa1.setContent(html_7faed7d924d240e792bcafd97befc18c);
+        
+
+        marker_d58db6c964784aa2adbbc82ff954aa6c.bindPopup(popup_1df4d1fc2dc348f98b2ee77564413aa1)
+        ;
+
+        
+    
+    
+            var marker_60153684a76842908a9777f169eaba38 = L.marker(
+                [38.2821653130533, -111.247048377991],
+                {"name": "other"}
+            ).addTo(feature_group_1e31b61cffaf4b0f888af4b48c7c5174);
+        
+    
+            var icon_520a04b1b0484ed5bc21d9dfc34b38cd = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tree", "iconColor": "white", "markerColor": "orange", "prefix": "fa"}
+            );
+            marker_60153684a76842908a9777f169eaba38.setIcon(icon_520a04b1b0484ed5bc21d9dfc34b38cd);
+        
+    
+        var popup_a42ad8e9843542e98f59ca6feba86ca7 = L.popup({"maxWidth": 500});
+
+        
+            var html_5ff898a1b34648408c7f9339baf65e92 = $(`<div id="html_5ff898a1b34648408c7f9339baf65e92" style="width: 100.0%; height: 100.0%;"><strong><font size="+1">Capitol Reef</font></strong><br/><u>Illegal Camping</u><br/>Camping in Capitol Reef is only allowed in developed campgrounds or in the backcountry with a permit acquired in person at the visitor center. All other camping in the park is illegal and will result in a citation.<br/><i><a href=https://www.nps.gov/care/planyourvisit/campinga.htm>Alert Information</i></a><br/><u>Seasonal Canyoneering Closures</u><br/>Effective immediately and until August 31, 2020, the following canyoneering routes are closed to protect sensitive resources in the area: Burro, Cottonwood, FiveMile, and Shinob Canyon (Na-gah, Nighthawk, Timpie).<br/><i><a href=https://go.nps.gov/o1qc7a>Alert Information</i></a><br/><a href=https://www.nps.gov/care/index.htm>Visit the NPS Website for More Information</a></div>`)[0];
+            popup_a42ad8e9843542e98f59ca6feba86ca7.setContent(html_5ff898a1b34648408c7f9339baf65e92);
+        
+
+        marker_60153684a76842908a9777f169eaba38.bindPopup(popup_a42ad8e9843542e98f59ca6feba86ca7)
+        ;
+
+        
+    
+    
+            var marker_7a6ea4f92e1f4ade8962fbb9d153b894 = L.marker(
+                [32.14089463, -104.5529688],
+                {"name": "other"}
+            ).addTo(feature_group_1e31b61cffaf4b0f888af4b48c7c5174);
+        
+    
+            var icon_ace29c4b1d9241459c6c701f8f0a54ad = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tree", "iconColor": "white", "markerColor": "orange", "prefix": "fa"}
+            );
+            marker_7a6ea4f92e1f4ade8962fbb9d153b894.setIcon(icon_ace29c4b1d9241459c6c701f8f0a54ad);
+        
+    
+        var popup_494cbaf101dc437980b6f8e258f4d228 = L.popup({"maxWidth": 500});
+
+        
+            var html_927b927eebbf49bfb0797b63fef57e4a = $(`<div id="html_927b927eebbf49bfb0797b63fef57e4a" style="width: 100.0%; height: 100.0%;"><strong><font size="+1">Carlsbad Caverns</font></strong><br/><u>Bat Flight Amphitheater Temporarily Closed</u><br/>To protect the bats and social distancing for visitors and staff, the amphitheater is temporarily closed from 5 pm to 8 am daily. Bat flights can be observed from the visitor center parking lot. Bat Flight Programs are cancelled until further notice.<br/><u>Footwear in the Cavern</u><br/>For safety, closed-toe shoes with good traction are recommended. Flip flops, sandals, and some walking shoes have little or no traction and increase the possibility of slips, trips, and falls. Watch your step and use the handrails when necessary.<br/><u>Items Worn or Used in Other Caves Not Allowed</u><br/>A disease know as White-Nose Syndrome is killing bats in North America. To prevent it from spreading to our bats, do not wear shoes, clothing, or bring any gear into any cave at Carlsbad Caverns National Park that were in another cave.<br/><i><a href=https://www.nps.gov/articles/what-is-white-nose-syndrome.htm>Alert Information</i></a><br/><u>Cavern and Visitor Center are Temporarily Closed as of March 21</u><br/>Following guidance from the CDC and state and local public health in consultation with NPS Public Health Service officers, the cavern and visitor center are temporarily closed. Park roads, desert trails, and picnic areas remain open.<br/><i><a href=https://www.nps.gov/cave/learn/news/update-park-modifying-operations-to-implement-latest-health-guidance.htm>Alert Information</i></a><br/><u>Unmanned Aircraft (Drones) Are Prohibited</u><br/>The use of unmanned aircraft, also known as drones, is prohibited within Carlsbad Caverns National Park.<br/><i><a href=https://www.nps.gov/articles/unmanned-aircraft-in-the-national-parks.htm>Alert Information</i></a><br/><u>White-Nose Syndrome Bio-Cleaning Mats</u><br/>All visitors who enter the cavern are required to walk on bio-cleaning mats after exiting. This extraordinary measure is due to the potential presence of the fungus which causes White-Nose Syndrome in New Mexico.<br/><i><a href=https://www.nps.gov/cave/learn/white-nose-syndrome-and-carlsbad-cavern.htm>Alert Information</i></a><br/><a href=https://www.nps.gov/cave/index.htm>Visit the NPS Website for More Information</a></div>`)[0];
+            popup_494cbaf101dc437980b6f8e258f4d228.setContent(html_927b927eebbf49bfb0797b63fef57e4a);
+        
+
+        marker_7a6ea4f92e1f4ade8962fbb9d153b894.bindPopup(popup_494cbaf101dc437980b6f8e258f4d228)
+        ;
+
+        
+    
+    
+            var marker_9819e589622c412482d5fb95ef95646d = L.marker(
+                [33.98680093, -119.9112735],
+                {"name": "other"}
+            ).addTo(feature_group_1e31b61cffaf4b0f888af4b48c7c5174);
+        
+    
+            var icon_6c2c8e3c7174419aa07e468ca012338b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tree", "iconColor": "white", "markerColor": "orange", "prefix": "fa"}
+            );
+            marker_9819e589622c412482d5fb95ef95646d.setIcon(icon_6c2c8e3c7174419aa07e468ca012338b);
+        
+    
+        var popup_53b6f14ac83441f9b9beee79a856ed85 = L.popup({"maxWidth": 500});
+
+        
+            var html_94c218fe8109416fba0293aa1da9da8a = $(`<div id="html_94c218fe8109416fba0293aa1da9da8a" style="width: 100.0%; height: 100.0%;"><strong><font size="+1">Channel Islands</font></strong><br/><u>Visitor Center Closed for Construction</u><br/>The mainland visitor center is closed until further notice due to construction. The park concessioners Island Packers and Santa Barbara Adventure Company have resumed island operations at approximately 40% capacity as of June 1.<br/><u>Santa Barbara Island Dock Closed; Landings Restricted to Adjacent Rocky Ledge</u><br/>Santa Barbara Island is open to public access, but landings are restricted to the rocky ledge adjacent to the dock. The dock is closed and is not expected to be repaired in the near future due to the severe winter storm damage.<br/><i><a href=https://www.nps.gov/chis/planyourvisit/conditions.htm>Alert Information</i></a><br/><u>Scorpion Anchorage Closure During Pier Construction</u><br/>Beginning November 1, 2019, there will be no public access to Scorpion Anchorage on Santa Cruz Island due to the construction of a new pier. Construction is expected to take 8-12 months.<br/><u>Island Packers and Santa Barbara Adventure Company Resume Island Operations</u><br/>The park transportation concessioner Island Packers is resuming boat service to the islands starting June 1. Santa Barbara Adventure Company will resume kayak tours on Santa Cruz Island. Both will operate at approximately 40% capacity.<br/><a href=https://www.nps.gov/chis/index.htm>Visit the NPS Website for More Information</a></div>`)[0];
+            popup_53b6f14ac83441f9b9beee79a856ed85.setContent(html_94c218fe8109416fba0293aa1da9da8a);
+        
+
+        marker_9819e589622c412482d5fb95ef95646d.bindPopup(popup_53b6f14ac83441f9b9beee79a856ed85)
+        ;
+
+        
+    
+    
+            var marker_7e3903ac7e024909b0a31ad1d7a40aa4 = L.marker(
+                [34.46050507, -97.00715669],
+                {"name": "other"}
+            ).addTo(feature_group_1e31b61cffaf4b0f888af4b48c7c5174);
+        
+    
+            var icon_a72d0161454441eeae9ecbfd48a417ef = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tree", "iconColor": "white", "markerColor": "orange", "prefix": "fa"}
+            );
+            marker_7e3903ac7e024909b0a31ad1d7a40aa4.setIcon(icon_a72d0161454441eeae9ecbfd48a417ef);
+        
+    
+        var popup_593865f87ca0464885e5dbc4c2461525 = L.popup({"maxWidth": 500});
+
+        
+            var html_c525d1a769bd4fbea32b1621c0d772bd = $(`<div id="html_c525d1a769bd4fbea32b1621c0d772bd" style="width: 100.0%; height: 100.0%;"><strong><font size="+1">Chickasaw</font></strong><br/><u>Travertine Nature Center Temporarily Closed</u><br/>Following guidance from the CDC and recommendations from state and local public health in consultation with NPS Public Health Service officers, the Travertine Nature Center is temporarily closed. Updates will be posted to the park website and social media<br/><u>Road Closures</u><br/>Following guidance from the CDC and recommendations from state and local public health in consultation with NPS Public Health Service officers, portions of the East Perimeter Road are temporarily closed.<br/><i><a href=https://www.nps.gov/chic/planyourvisit/conditions.htm>Alert Information</i></a><br/><u>Buckhorn Loop A Closed for Plumbing Repairs</u><br/>Due to emergency plumbing repairs, Buckhorn Loop A is temporarily closed while work is being completed.<br/><u>Some Campgrounds Temporarily Closed</u><br/>Following guidance from the CDC and recommendations from state and local public health authorities in consultation with Chickasaw Nation leadership and local community leaders, some campgrounds at Chickasaw National Recreation area are temporarily closed.<br/><i><a href=https://www.nps.gov/chic/planyourvisit/conditions.htm>Alert Information</i></a><br/><a href=https://www.nps.gov/chic/index.htm>Visit the NPS Website for More Information</a></div>`)[0];
+            popup_593865f87ca0464885e5dbc4c2461525.setContent(html_c525d1a769bd4fbea32b1621c0d772bd);
+        
+
+        marker_7e3903ac7e024909b0a31ad1d7a40aa4.bindPopup(popup_593865f87ca0464885e5dbc4c2461525)
+        ;
+
+        
+    
+    
+            var marker_c5e7a3a26e09473fab62b8e172a1e4d4 = L.marker(
+                [33.79187523, -80.74867805],
+                {"name": "other"}
+            ).addTo(feature_group_1e31b61cffaf4b0f888af4b48c7c5174);
+        
+    
+            var icon_d92e99c6bf904958a65918bdb4891899 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tree", "iconColor": "white", "markerColor": "orange", "prefix": "fa"}
+            );
+            marker_c5e7a3a26e09473fab62b8e172a1e4d4.setIcon(icon_d92e99c6bf904958a65918bdb4891899);
+        
+    
+        var popup_6f745c5ec1024ca6abbb01e81ab3cf38 = L.popup({"maxWidth": 500});
+
+        
+            var html_6c8bee32836049d1860f27725ec09f0d = $(`<div id="html_6c8bee32836049d1860f27725ec09f0d" style="width: 100.0%; height: 100.0%;"><strong><font size="+1">Congaree</font></strong><br/><u>Phased Reopening - Backcountry Areas Open for Day-Use Activities (Sunrise to Sunset)</u><br/>The park’s backcountry including canoe landings & the following trails are currently open to day-use activities (sunrise to sunset): Cedar Creek Canoe Trail, Kingsnake, Bates Ferry, Fork Swamp, Oakridge & River. No potable water or restrooms are available<br/><i><a href=https://www.nps.gov/cong/learn/news/congaree-beginning-increased-access.htm>Alert Information</i></a><br/><u>Phased reopening – some locations closed due to COVID-19 </u><br/>We are working to increase access to the park in a phased approach. Frontcountry areas & facilities are temporarily closed (Campgrounds, Visitor Center, restrooms & frontcountry trails (Boardwalk, Bluff, Sims & Weston Lake Loop).<br/><i><a href=https://www.nps.gov/cong/learn/news/congaree-beginning-increased-access.htm>Alert Information</i></a><br/><a href=https://www.nps.gov/cong/index.htm>Visit the NPS Website for More Information</a></div>`)[0];
+            popup_6f745c5ec1024ca6abbb01e81ab3cf38.setContent(html_6c8bee32836049d1860f27725ec09f0d);
+        
+
+        marker_c5e7a3a26e09473fab62b8e172a1e4d4.bindPopup(popup_6f745c5ec1024ca6abbb01e81ab3cf38)
+        ;
+
+        
+    
+    
+            var marker_b2a46f44ed0f43998dfd6ce11e0b6c4f = L.marker(
+                [38.46584558, -107.3303371],
+                {"name": "other"}
+            ).addTo(feature_group_1e31b61cffaf4b0f888af4b48c7c5174);
+        
+    
+            var icon_4d2948955fa74026af24d1637e227dc6 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tree", "iconColor": "white", "markerColor": "orange", "prefix": "fa"}
+            );
+            marker_b2a46f44ed0f43998dfd6ce11e0b6c4f.setIcon(icon_4d2948955fa74026af24d1637e227dc6);
+        
+    
+        var popup_f50f97c3f9754d699f8457ec9d7c0e2c = L.popup({"maxWidth": 500});
+
+        
+            var html_1baab288ca65482b88de5739e62735d1 = $(`<div id="html_1baab288ca65482b88de5739e62735d1" style="width: 100.0%; height: 100.0%;"><strong><font size="+1">Curecanti</font></strong><br/><u>East Elk Creek Road Closed</u><br/>East Elk Creek will be closed to ALL entry through June 30, 2020 for the protection of sensitive natural resources during the spring months. This closure is for the entire area and applies to all uses, including walking.<br/><u>Annual Climbing Closure</u><br/>The annual climbing closure for the protection of nesting Peregrine Falcons is in effect.<br/><i><a href=https://www.nps.gov/cure/planyourvisit/climbingclosure.htm>Alert Information</i></a><br/><u>Campground Status</u><br/>Elk Creek - Loops A,B & D are OPEN. Reservations are strongly recommended for Loops A & D. Stevens Creek - OPEN, reservations required. Ponderosa - OPEN. Credit cards are the preferred method of payment for all campgrounds.<br/><u>Covid-19 Closures</u><br/>Elk Creek Visitor Center is closed, but rangers are staffing a table outside to answer questions and help plan your visit. Blue Mesa, Morrow and Crystal Reservoirs are open to all permitted activities. Morrow Point Boat Tours have not started.<br/><i><a href=https://www.nps.gov/cure/learn/news/pr20-05.htm>Alert Information</i></a><br/><u>Antler Collecting Not Allowed in Curecanti</u><br/>Collecting antlers is illegal within the NPS boundary via 36 CFR 2.1 (1)(i).  Collectors should call (970-641-2337 x205) or visit the Elk Creek Visitor Center if unsure about the NPS boundary.<br/><u>East Elk Creek, Red Creek and Cimarron Campgrounds Closed for Summer</u><br/>East Elk Creek and Red Creek Group Campgrounds will remain closed tor the summer to comply with Gunnison County public health orders regarding group sizes. Cimarron Campground is closed for water line repairs.<br/><a href=https://www.nps.gov/cure/index.htm>Visit the NPS Website for More Information</a></div>`)[0];
+            popup_f50f97c3f9754d699f8457ec9d7c0e2c.setContent(html_1baab288ca65482b88de5739e62735d1);
+        
+
+        marker_b2a46f44ed0f43998dfd6ce11e0b6c4f.bindPopup(popup_f50f97c3f9754d699f8457ec9d7c0e2c)
+        ;
+
+        
+    
+    
+            var marker_0fb33961334f4c9b91fdef3489254263 = L.marker(
+                [41.26093905, -81.57116722],
+                {"name": "other"}
+            ).addTo(feature_group_1e31b61cffaf4b0f888af4b48c7c5174);
+        
+    
+            var icon_43fcac2fd8cf43bfbb71a5bd34c077ce = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tree", "iconColor": "white", "markerColor": "orange", "prefix": "fa"}
+            );
+            marker_0fb33961334f4c9b91fdef3489254263.setIcon(icon_43fcac2fd8cf43bfbb71a5bd34c077ce);
+        
+    
+        var popup_2ba40603e0b14b15b89e8762b927bdc7 = L.popup({"maxWidth": 500});
+
+        
+            var html_81efa9d019b2460bba0f8f3a5ca1ca84 = $(`<div id="html_81efa9d019b2460bba0f8f3a5ca1ca84" style="width: 100.0%; height: 100.0%;"><strong><font size="+1">Cuyahoga Valley</font></strong><br/><u>Blue Hen Falls Parking Closed</u><br/>Parking and overflow parking are closed until further notice, due to safety concerns.<br/><i><a href=https://www.nps.gov/cuva/learn/management/upload/2020-Compendium-with-signature_Final.pdf>Alert Information</i></a><br/><u>Boston Store Parking Lot Reduced</u><br/>Park in the overflow lot for Towpath access, or in the new Boston Mill Visitor Center lot. There are a few spots for limited mobility in the Boston Store lot.<br/><u>Expect Crowding</u><br/>Parking lots and popular destinations are crowded especially on summer weekends.<br/><u>Eagle Closure: February 10 to July 31, 2020</u><br/>The railroad tracks and 30-foot right-of-way on either side are closed to all pedestrian traffic, from the Route 82 Bridge at Station Road visitor use area north to the Fitzwater Train Yard.<br/><i><a href=https://www.nps.gov/cuva/learn/news/section-of-railroad-tracks-closed-to-pedestrians-for-eagle-nesting.htm>Alert Information</i></a><br/><u>Current East Rim Trail Status</u><br/>Click "more" to find out if the East Rim Trail is open for today. In good conditions trail is open 6:00 a.m. - 11:00 p.m. for bikers and as posted for other trail users. In wet or hazardous conditions, the trail will close to all users to prevent damage.<br/><i><a href=https://twitter.com/cvnpmtb>Alert Information</i></a><br/><u>Bridle Trail</u><br/>Valley Bridle Trail south of SR 303, across from former golf course, is collapsed by the river.<br/><u>Coronavirus (COVID-19) Temporary Closures</u><br/>CLOSED: Boston Mill Visitor Center, some restrooms (portable toilets available). There may be other closures, call the closure hotline before visiting 440-546-5960. NO DRINKING WATER AVAILABLE IN THE PARK.<br/><i><a href=https://www.nps.gov/cuva/national-park-service-and-coronavirus.htm>Alert Information</i></a><br/><u>Station Road Bridge Area</u><br/>Railroad tracks, river and trail near river closed during Brecksville Dam removal. Paddlers must portage using the Towpath Trail on the east side of the river. Through travel on Towpath Trail is open.<br/><i><a href=https://www.nps.gov/cuva/learn/news/brecksville-dam-removal-underway.htm>Alert Information</i></a><br/><a href=https://www.nps.gov/cuva/index.htm>Visit the NPS Website for More Information</a></div>`)[0];
+            popup_2ba40603e0b14b15b89e8762b927bdc7.setContent(html_81efa9d019b2460bba0f8f3a5ca1ca84);
+        
+
+        marker_0fb33961334f4c9b91fdef3489254263.bindPopup(popup_2ba40603e0b14b15b89e8762b927bdc7)
+        ;
+
+        
+    
+    
+            var marker_2f7e788f58ed4fdf86510e58d9368ecc = L.marker(
+                [36.48753731, -117.134395],
+                {"name": "other"}
+            ).addTo(feature_group_1e31b61cffaf4b0f888af4b48c7c5174);
+        
+    
+            var icon_7244c7b144e243b3ab61743b7b60d22b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tree", "iconColor": "white", "markerColor": "orange", "prefix": "fa"}
+            );
+            marker_2f7e788f58ed4fdf86510e58d9368ecc.setIcon(icon_7244c7b144e243b3ab61743b7b60d22b);
+        
+    
+        var popup_39c3cc09683b494a9c1f39232dda6ed5 = L.popup({"maxWidth": 500});
+
+        
+            var html_580f2cba200b4c91a3a7f9d77624cf63 = $(`<div id="html_580f2cba200b4c91a3a7f9d77624cf63" style="width: 100.0%; height: 100.0%;"><strong><font size="+1">Death Valley</font></strong><br/><u>Permits Limited</u><br/>To limit the spread of COVID-19, only car testing permits are available. All other permits suspended, including CUAs and SUPs: transportation, commercial activity, guiding, film, events, and research permits. Please send questions to DEVA_permits@nps.gov.<br/><u>Scotty's Castle CLOSED until fall 2021.</u><br/>Flooding in Grapevine Canyon from a severe thunderstorm has destroyed the road to Scotty's Castle, damaged infrastructure and some out-buildings in the Castle complex.<br/><i><a href=https://www.nps.gov/deva/learn/nature/flood-2015.htm>Alert Information</i></a><br/><u>Death Valley National Park is partially open</u><br/>The park is moving to Phase 3.1 and working to open trail heads, overlooks, and bathrooms along CA-190 and Daylight Pass roads. All other park roads remain closed to vehicle traffic.<br/><i><a href=https://www.nps.gov/deva/planyourvisit/conditions.htm>Alert Information</i></a><br/><a href=https://www.nps.gov/deva/index.htm>Visit the NPS Website for More Information</a></div>`)[0];
+            popup_39c3cc09683b494a9c1f39232dda6ed5.setContent(html_580f2cba200b4c91a3a7f9d77624cf63);
+        
+
+        marker_2f7e788f58ed4fdf86510e58d9368ecc.bindPopup(popup_39c3cc09683b494a9c1f39232dda6ed5)
+        ;
+
+        
+    
+    
+            var marker_70d6b7bbb6924e9da64c788648437b19 = L.marker(
+                [41.12793491, -74.94751173],
+                {"name": "other"}
+            ).addTo(feature_group_1e31b61cffaf4b0f888af4b48c7c5174);
+        
+    
+            var icon_3faa221c2b0240629d56b64e264cbbc9 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tree", "iconColor": "white", "markerColor": "orange", "prefix": "fa"}
+            );
+            marker_70d6b7bbb6924e9da64c788648437b19.setIcon(icon_3faa221c2b0240629d56b64e264cbbc9);
+        
+    
+        var popup_c6f4a8883b3f43caa305e4db8cefa2ec = L.popup({"maxWidth": 500});
+
+        
+            var html_04bc8ba2c1784b6f8addb7f43e6e993c = $(`<div id="html_04bc8ba2c1784b6f8addb7f43e6e993c" style="width: 100.0%; height: 100.0%;"><strong><font size="+1">Delaware Water Gap</font></strong><br/><u>Temporary Closure of Park Facilities</u><br/>Many public facilitates, including most restrooms, remain temporarily closed. Click on "more" for a current list of closures.<br/><i><a href=https://www.nps.gov/dewa/planyourvisit/conditions.htm>Alert Information</i></a><br/><u>Temporary Suspension of Amenity Fees</u><br/>Amenity fees are temporarily suspended until further notice.<br/><i><a href=https://www.nps.gov/dewa/learn/news/delaware-water-gap-national-recreation-area-temporarily-suspends-amenity-fees.htm>Alert Information</i></a><br/><a href=https://www.nps.gov/dewa/index.htm>Visit the NPS Website for More Information</a></div>`)[0];
+            popup_c6f4a8883b3f43caa305e4db8cefa2ec.setContent(html_04bc8ba2c1784b6f8addb7f43e6e993c);
+        
+
+        marker_70d6b7bbb6924e9da64c788648437b19.bindPopup(popup_c6f4a8883b3f43caa305e4db8cefa2ec)
+        ;
+
+        
+    
+    
+            var marker_4eeff84d090a4755ba387b9d84c12ddd = L.marker(
+                [63.29777484, -151.0526568],
+                {"name": "other"}
+            ).addTo(feature_group_1e31b61cffaf4b0f888af4b48c7c5174);
+        
+    
+            var icon_74be02bcb5a04101b1c8401dda7e70db = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tree", "iconColor": "white", "markerColor": "orange", "prefix": "fa"}
+            );
+            marker_4eeff84d090a4755ba387b9d84c12ddd.setIcon(icon_74be02bcb5a04101b1c8401dda7e70db);
+        
+    
+        var popup_26caef419e0148da8f65beae3b4e1a4d = L.popup({"maxWidth": 500});
+
+        
+            var html_81cf5dfef76c47768a388b89b499b3ae = $(`<div id="html_81cf5dfef76c47768a388b89b499b3ae" style="width: 100.0%; height: 100.0%;"><strong><font size="+1">Denali</font></strong><br/><u>Changed Hours & Some Closures During COVID-19 Pandemic</u><br/>Please check our phased reopening plan to understand which services (including buses) and facilities are closed, which are open but with different hours than normal, and which are unaffected.<br/><i><a href=https://www.nps.gov/dena/planyourvisit/conditions.htm>Alert Information</i></a><br/><u>2020 Denali/Foraker Climbing Season Suspended</u><br/>Denali National Park and Preserve will not be issuing climbing permits for Denali or Mount Foraker for the 2020 climbing season. All mountaineers currently registered to climb these peaks will be entitled to a full refund of their climbing fee.<br/><i><a href=https://www.nps.gov/dena/learn/news/climbing-season-suspension-2020.htm>Alert Information</i></a><br/><u>Backpacking Permits</u><br/>Permits to camp in the backcountry are available via email. Backpackers must provide their own bear-resistant food containers, which are required beginning on April 15. Please contact us to learn more.<br/><i><a href=https://www.nps.gov/dena/planyourvisit/backcountry.htm>Alert Information</i></a><br/><a href=https://www.nps.gov/dena/index.htm>Visit the NPS Website for More Information</a></div>`)[0];
+            popup_26caef419e0148da8f65beae3b4e1a4d.setContent(html_81cf5dfef76c47768a388b89b499b3ae);
+        
+
+        marker_4eeff84d090a4755ba387b9d84c12ddd.bindPopup(popup_26caef419e0148da8f65beae3b4e1a4d)
+        ;
+
+        
+    
+    
+            var marker_4e2953974403485e9a2e8b8c98ecba8e = L.marker(
+                [24.628741, -82.87319],
+                {"name": "other"}
+            ).addTo(feature_group_1e31b61cffaf4b0f888af4b48c7c5174);
+        
+    
+            var icon_9a99305d95b24fd5a54c66a3a5aa5ff4 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tree", "iconColor": "white", "markerColor": "orange", "prefix": "fa"}
+            );
+            marker_4e2953974403485e9a2e8b8c98ecba8e.setIcon(icon_9a99305d95b24fd5a54c66a3a5aa5ff4);
+        
+    
+        var popup_a66b50d496354f0aa3a3effc214bcba5 = L.popup({"maxWidth": 500});
+
+        
+            var html_149bb2efa1cb45f8a2130be4bbe336b5 = $(`<div id="html_149bb2efa1cb45f8a2130be4bbe336b5" style="width: 100.0%; height: 100.0%;"><strong><font size="+1">Dry Tortugas</font></strong><br/><u>Phased reopening – some facilities closed due to COVID-19 </u><br/>We are increasing access to the park in a phased approach. Concession tours to the park have resumed. Campground has reopened. Garden and Loggerhead Keys are open from sunrise to sunset. Marine waters and harbors remain open. Entrance fees apply.<br/><i><a href=https://www.nps.gov/drto/learn/news/ferry-boat-and-sea-plane-tours-resume-and-campground-reopens.htm>Alert Information</i></a><br/><u>Ferry boat and sea plane concessions have resumed tours and services</u><br/>The ferry boat and sea plane concessions have resumed their operations with modifications for public health. Check individual company websites for schedules and reservations.<br/><i><a href=https://www.nps.gov/drto/planyourvisit/guidedtours.htm>Alert Information</i></a><br/><a href=https://www.nps.gov/drto/index.htm>Visit the NPS Website for More Information</a></div>`)[0];
+            popup_a66b50d496354f0aa3a3effc214bcba5.setContent(html_149bb2efa1cb45f8a2130be4bbe336b5);
+        
+
+        marker_4e2953974403485e9a2e8b8c98ecba8e.bindPopup(popup_a66b50d496354f0aa3a3effc214bcba5)
+        ;
+
+        
+    
+    
+            var marker_a3bfdf6aa7fd499983d2e2258db09352 = L.marker(
+                [25.37294225, -80.88200301],
+                {"name": "other"}
+            ).addTo(feature_group_1e31b61cffaf4b0f888af4b48c7c5174);
+        
+    
+            var icon_a9e43f972ce2490d929e2e4c37d20d9a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tree", "iconColor": "white", "markerColor": "orange", "prefix": "fa"}
+            );
+            marker_a3bfdf6aa7fd499983d2e2258db09352.setIcon(icon_a9e43f972ce2490d929e2e4c37d20d9a);
+        
+    
+        var popup_2814843a91e744549579fcb74cabb47c = L.popup({"maxWidth": 500});
+
+        
+            var html_47206138a2a8444eb06461ad1c1b899d = $(`<div id="html_47206138a2a8444eb06461ad1c1b899d" style="width: 100.0%; height: 100.0%;"><strong><font size="+1">Everglades</font></strong><br/><u>Wilderness Camping</u><br/>Wilderness (backcountry) campsites (except North Nest Key) are open. Self-registration permits available outside of the Flamingo and Gulf Coast Visitor Centers.<br/><u>Phased reopening - check status due to COVID-19</u><br/>We are working to increase access to the park in a phased approach. All areas of the park are now open. Concession-operated tours and services are open with modifications for public health. Visitor centers and North Nest Key remain closed.<br/><i><a href=https://www.nps.gov/ever/learn/news/south-florida-national-parks-resume-commercial-operations.htm>Alert Information</i></a><br/><u>Entrance fees resume, digital passes preferred</u><br/>To protect visitors and employees and minimize the spread of COVID-19, cashless transactions are encouraged. Pre-paid digital passes and credit cards are accepted.<br/><i><a href=https://www.nps.gov/ever/planyourvisit/fees.htm>Alert Information</i></a><br/><u>North Nest Key is Closed Until Further Notice</u><br/>North Nest Key and the area 100 yards from the shore will be closed to all public entry. This measure has proved necessary to comply with guidance on social distancing from federal/state/local public health authorities.<br/><a href=https://www.nps.gov/ever/index.htm>Visit the NPS Website for More Information</a></div>`)[0];
+            popup_2814843a91e744549579fcb74cabb47c.setContent(html_47206138a2a8444eb06461ad1c1b899d);
+        
+
+        marker_a3bfdf6aa7fd499983d2e2258db09352.bindPopup(popup_2814843a91e744549579fcb74cabb47c)
+        ;
+
+        
+    
+    
+            var marker_3dc503cc506b4ae3b4f15a137627a03f = L.marker(
+                [67.75961636, -153.2917758],
+                {"name": "other"}
+            ).addTo(feature_group_1e31b61cffaf4b0f888af4b48c7c5174);
+        
+    
+            var icon_08d3a3f90bb04a37844125a384bf86a3 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tree", "iconColor": "white", "markerColor": "orange", "prefix": "fa"}
+            );
+            marker_3dc503cc506b4ae3b4f15a137627a03f.setIcon(icon_08d3a3f90bb04a37844125a384bf86a3);
+        
+    
+        var popup_91088c695a77433985ff8fac00bdfb29 = L.popup({"maxWidth": 500});
+
+        
+            var html_ef38a606623044a583a40d3e42ab1ab1 = $(`<div id="html_ef38a606623044a583a40d3e42ab1ab1" style="width: 100.0%; height: 100.0%;"><strong><font size="+1">Gates Of The Arctic</font></strong><br/><u>COVID-19 Update</u><br/>Visitors be aware that air travel access to the park and contact with information centers may be limited. Travel restrictions may exist as businesses close or greatly reduce operations to non-essential travel. Make contact before making travel plans.<br/><i><a href=https://www.alaskacenters.gov/visitors-centers/fairbanks>Alert Information</i></a><br/><a href=https://www.nps.gov/gaar/index.htm>Visit the NPS Website for More Information</a></div>`)[0];
+            popup_91088c695a77433985ff8fac00bdfb29.setContent(html_ef38a606623044a583a40d3e42ab1ab1);
+        
+
+        marker_3dc503cc506b4ae3b4f15a137627a03f.bindPopup(popup_91088c695a77433985ff8fac00bdfb29)
+        ;
+
+        
+    
+    
+            var marker_391014e4c87e40d0a98c279ee19887d9 = L.marker(
+                [40.56536246, -73.9171087],
+                {"name": "other"}
+            ).addTo(feature_group_1e31b61cffaf4b0f888af4b48c7c5174);
+        
+    
+            var icon_8074ba014be747babd2241c4e526bb0f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tree", "iconColor": "white", "markerColor": "orange", "prefix": "fa"}
+            );
+            marker_391014e4c87e40d0a98c279ee19887d9.setIcon(icon_8074ba014be747babd2241c4e526bb0f);
+        
+    
+        var popup_c45c73cb554d450899c713a0d1061b71 = L.popup({"maxWidth": 500});
+
+        
+            var html_a243421da4ed4207944177c89ae05096 = $(`<div id="html_a243421da4ed4207944177c89ae05096" style="width: 100.0%; height: 100.0%;"><strong><font size="+1">Gateway</font></strong><br/><u>All three of Gateway's campgrounds are closed through June 30</u><br/>Reservations will not be accepted at this time.<br/><u>Service Updates due to COVID-19</u><br/>We are working to increase access to the park in a phased approach. Certain areas of the park remain closed and have restrictions.<br/><i><a href=https://www.nps.gov/gate/how-will-covid-19-affect-my-visit.htm>Alert Information</i></a><br/><u>Dogs prohibited at certain areas of Gateway National Recreation Area from March 15- September 15</u><br/>Dogs are prohibited from ocean side beaches at Sandy Hook, Fort Tilden, Jacob Riis Park, West Beach, Breezy Point Tip and on the bayside of Breezy Point Tip from March 15 to September 15 due to nesting birds.<br/><i><a href=https://www.nps.gov/gate/share-the-beach-with-piping-plovers.htm>Alert Information</i></a><br/><u>Breezy Point Tip Off Road Permits Sold Out for 2020</u><br/>All 4 X 4 permits have been sold out.<br/><a href=https://www.nps.gov/gate/index.htm>Visit the NPS Website for More Information</a></div>`)[0];
+            popup_c45c73cb554d450899c713a0d1061b71.setContent(html_a243421da4ed4207944177c89ae05096);
+        
+
+        marker_391014e4c87e40d0a98c279ee19887d9.bindPopup(popup_c45c73cb554d450899c713a0d1061b71)
+        ;
+
+        
+    
+    
+            var marker_9425f3f59dc94351bf2cca4039f38176 = L.marker(
+                [38.6258069, -90.1892508],
+                {"name": "other"}
+            ).addTo(feature_group_1e31b61cffaf4b0f888af4b48c7c5174);
+        
+    
+            var icon_89f35888ac284b3aad4b1054c220f6b5 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tree", "iconColor": "white", "markerColor": "orange", "prefix": "fa"}
+            );
+            marker_9425f3f59dc94351bf2cca4039f38176.setIcon(icon_89f35888ac284b3aad4b1054c220f6b5);
+        
+    
+        var popup_fffc682d80834928996c1f18afe06b5a = L.popup({"maxWidth": 500});
+
+        
+            var html_661e2ceea90b4cef9c83dfa0c637f235 = $(`<div id="html_661e2ceea90b4cef9c83dfa0c637f235" style="width: 100.0%; height: 100.0%;"><strong><font size="+1">Gateway Arch</font></strong><br/><u>Park Closure due to evolving COVID-19 health situation</u><br/>The Gateway Arch and Old Courthouse are temporarily closed beginning Wednesday, March 18 until further notice. The Arch grounds remain open to provide the public healthy walking and biking options.<br/><a href=https://www.nps.gov/jeff/index.htm>Visit the NPS Website for More Information</a></div>`)[0];
+            popup_fffc682d80834928996c1f18afe06b5a.setContent(html_661e2ceea90b4cef9c83dfa0c637f235);
+        
+
+        marker_9425f3f59dc94351bf2cca4039f38176.bindPopup(popup_fffc682d80834928996c1f18afe06b5a)
+        ;
+
+        
+    
+    
+            var marker_27a22a97e1cf40958e57293c6c0bae83 = L.marker(
+                [38.20614947, -81.00420836],
+                {"name": "other"}
+            ).addTo(feature_group_1e31b61cffaf4b0f888af4b48c7c5174);
+        
+    
+            var icon_e9c4560482804a27a4d25f48d8ccc832 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tree", "iconColor": "white", "markerColor": "orange", "prefix": "fa"}
+            );
+            marker_27a22a97e1cf40958e57293c6c0bae83.setIcon(icon_e9c4560482804a27a4d25f48d8ccc832);
+        
+    
+        var popup_5a8ba014281d4339a6481d5207a41983 = L.popup({"maxWidth": 500});
+
+        
+            var html_72dd1f352b094a00922f48bfe9126827 = $(`<div id="html_72dd1f352b094a00922f48bfe9126827" style="width: 100.0%; height: 100.0%;"><strong><font size="+1">Gauley River</font></strong><br/><u>Gauley Tailwaters Campground Temorarily Closed</u><br/>The National Park Service will be temporarily closing campgrounds and restrooms in all areas of New River Gorge National River, Gauley River National Recreation Area, and Bluestone National Scenic River in response to COVID-19.<br/><i><a href=https://www.nps.gov/gari/learn/news/new-river-gorge-national-river-announces-temporary-closure-of-campgrounds-and-restrooms.htm>Alert Information</i></a><br/><a href=https://www.nps.gov/gari/index.htm>Visit the NPS Website for More Information</a></div>`)[0];
+            popup_5a8ba014281d4339a6481d5207a41983.setContent(html_72dd1f352b094a00922f48bfe9126827);
+        
+
+        marker_27a22a97e1cf40958e57293c6c0bae83.bindPopup(popup_5a8ba014281d4339a6481d5207a41983)
+        ;
+
+        
+    
+    
+            var marker_51ad72e3e569487e802376013b39b890 = L.marker(
+                [37.51841301, -110.7718311],
+                {"name": "other"}
+            ).addTo(feature_group_1e31b61cffaf4b0f888af4b48c7c5174);
+        
+    
+            var icon_98fda9f7959549e18d55f65352bbd7ab = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tree", "iconColor": "white", "markerColor": "orange", "prefix": "fa"}
+            );
+            marker_51ad72e3e569487e802376013b39b890.setIcon(icon_98fda9f7959549e18d55f65352bbd7ab);
+        
+    
+        var popup_5060f1b9165a4be59fd7ce99202edf25 = L.popup({"maxWidth": 500});
+
+        
+            var html_78f6334766c94ddb80afddc40a1cb003 = $(`<div id="html_78f6334766c94ddb80afddc40a1cb003" style="width: 100.0%; height: 100.0%;"><strong><font size="+1">Glen Canyon</font></strong><br/><u>CLICK HERE TO SEE WHAT IS OPEN AND WHAT IS CLOSED</u><br/>Following guidance from the White House, Centers for Disease Control and Prevention, and state and local public health authorities, Glen Canyon National Recreation Area is increasing recreational access and services.<br/><i><a href=https://www.nps.gov/glca/planyourvisit/conditions.htm>Alert Information</i></a><br/><u>Public Access to Antelope Point Marina is closed</u><br/>The health and safety of our visitors, employees, volunteers, and partners continues to be paramount. We are working with federal, state, tribal, and local public health authorities to closely monitor the COVID-19 pandemic with a phased reopening.<br/><i><a href=https://www.nps.gov/glca/learn/news/05192020.htm>Alert Information</i></a><br/><a href=https://www.nps.gov/glca/index.htm>Visit the NPS Website for More Information</a></div>`)[0];
+            popup_5060f1b9165a4be59fd7ce99202edf25.setContent(html_78f6334766c94ddb80afddc40a1cb003);
+        
+
+        marker_51ad72e3e569487e802376013b39b890.bindPopup(popup_5060f1b9165a4be59fd7ce99202edf25)
+        ;
+
+        
+    
+    
+            var marker_a8511e7e393244529ead525258dcd9c5 = L.marker(
+                [58.80086718, -136.8407579],
+                {"name": "other"}
+            ).addTo(feature_group_1e31b61cffaf4b0f888af4b48c7c5174);
+        
+    
+            var icon_643779a660d34e7da1d58a2721cbf403 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tree", "iconColor": "white", "markerColor": "orange", "prefix": "fa"}
+            );
+            marker_a8511e7e393244529ead525258dcd9c5.setIcon(icon_643779a660d34e7da1d58a2721cbf403);
+        
+    
+        var popup_99942e0b89614abfb6e39aa6c84ee377 = L.popup({"maxWidth": 500});
+
+        
+            var html_0c8c13b3c41942629350bfca666b7398 = $(`<div id="html_0c8c13b3c41942629350bfca666b7398" style="width: 100.0%; height: 100.0%;"><strong><font size="+1">Glacier Bay</font></strong><br/><u>Glacier Bay Temporarily Suspends Alsek River Permits</u><br/>Glacier Bay National Park and Preserve, in response to the Government of Canada and the U.S. Department of State, is announcing additional changes to operations to support local efforts to slow the spread of Covid-19. Click (more) for full news release.<br/><i><a href=https://www.nps.gov/glba/learn/news/glacier-bay-national-park-and-preserve-modifies-operations-to-implement-health-guidance-glacier-bay-temporarily-suspends-alsek-river-permits.htm>Alert Information</i></a><br/><u>Bartlett Cove Public Use Dock Access is Limited</u><br/>In support of a recent health mandate issued by the State of Alaska, the Bartlett Cove Public Use Dock will be open to limited users, although Bartlett Cove services remain limited. For additional details click (more) to read the full news release.<br/><i><a href=https://www.nps.gov/glba/learn/news/glacier-bay-opening-public-use-dock-with-limited-services.htm>Alert Information</i></a><br/><u>Yakutat Ranger Station/Visitor Center is Closed</u><br/>As a public health precaution, the Yakutat Ranger Station/Visitor Center is temporarily closed for the safety of staff & visitors. Updates will be posted as they become available.<br/><u>Glacier Bay Open with Limited Services</u><br/>Due to the COVID-19 Pandemic, Glacier Bay and many of its partners have altered or canceled services for the 2020 season. Glacier Bay is open, but services are limited. Click (more) below, or navigate to: Learn About the Park -> News -> Covid-19 Impacts<br/><i><a href=https://www.nps.gov/glba/learn/covid-19-impacts-to-services.htm>Alert Information</i></a><br/><a href=https://www.nps.gov/glba/index.htm>Visit the NPS Website for More Information</a></div>`)[0];
+            popup_99942e0b89614abfb6e39aa6c84ee377.setContent(html_0c8c13b3c41942629350bfca666b7398);
+        
+
+        marker_a8511e7e393244529ead525258dcd9c5.bindPopup(popup_99942e0b89614abfb6e39aa6c84ee377)
+        ;
+
+        
+    
+    
+            var marker_f3f46edd7d6e45fd88a5bfbc98c7f43d = L.marker(
+                [37.85982543, -122.6007386],
+                {"name": "other"}
+            ).addTo(feature_group_1e31b61cffaf4b0f888af4b48c7c5174);
+        
+    
+            var icon_7a1e6c6e93b143abbda82d0a234d786b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tree", "iconColor": "white", "markerColor": "orange", "prefix": "fa"}
+            );
+            marker_f3f46edd7d6e45fd88a5bfbc98c7f43d.setIcon(icon_7a1e6c6e93b143abbda82d0a234d786b);
+        
+    
+        var popup_49c42c24ba22428597a923e8d5f36198 = L.popup({"maxWidth": 500});
+
+        
+            var html_fe17f403d63a4c4fa567aa8597172b65 = $(`<div id="html_fe17f403d63a4c4fa567aa8597172b65" style="width: 100.0%; height: 100.0%;"><strong><font size="+1">Golden Gate</font></strong><br/><u>Section of Mason Street at Crissy Field closed starting week of December 9</u><br/>A section of Mason Street at Crissy Field will close for six months beginning the week of December 9, 2019. Vehicle, bike and pedestrian traffic will be re-routed.<br/><i><a href=https://www.presidio.gov/presidio-trust/planning/Quartermaster-Reach-Marsh>Alert Information</i></a><br/><u>Phased reopening – some locations closed due to COVID-19</u><br/>We are working to increase access to the park in a phased approach. Many sites have reopened. Visit our Temporary Closure page for more details: https://www.nps.gov/goga/planyourvisit/temporary-facilities-closure-advisory.htm<br/><i><a href=https://www.nps.gov/goga/planyourvisit/temporary-facilities-closure-advisory.htm>Alert Information</i></a><br/><u>June 18, 2020 - Temporary Closure Langdon Court and the Pacific Coast Overlook</u><br/>Starting at 6:45 A.M Langdon Court parking lot, the Pacific Coast Overlook, and a small portion of the coastal trail will be rerouted so crews can safely remove hazardous trees. Stay out of work site and follow detour signs.<br/><u>Sand removal work at Ocean Beach starting Monday, June 15</u><br/>A project to remove sand from along the seawall between stairwells 15-28 will begin Monday, June 15. Beach access along the promenade will be closed at intervals of working areas. The work is expected to be completed by June 30.<br/><a href=https://www.nps.gov/goga/index.htm>Visit the NPS Website for More Information</a></div>`)[0];
+            popup_49c42c24ba22428597a923e8d5f36198.setContent(html_fe17f403d63a4c4fa567aa8597172b65);
+        
+
+        marker_f3f46edd7d6e45fd88a5bfbc98c7f43d.bindPopup(popup_49c42c24ba22428597a923e8d5f36198)
+        ;
+
+        
+    
+    
+            var marker_c458a89ab27c47c69557685b76c0b6b0 = L.marker(
+                [36.17280161, -112.6836024],
+                {"name": "other"}
+            ).addTo(feature_group_1e31b61cffaf4b0f888af4b48c7c5174);
+        
+    
+            var icon_439611e3a16b49af82794f9b4f1e47eb = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tree", "iconColor": "white", "markerColor": "orange", "prefix": "fa"}
+            );
+            marker_c458a89ab27c47c69557685b76c0b6b0.setIcon(icon_439611e3a16b49af82794f9b4f1e47eb);
+        
+    
+        var popup_c543ee89d70840d69ce8d2bf9eac8e14 = L.popup({"maxWidth": 500});
+
+        
+            var html_d26c3bf2510e404aa6444cdd0bc7db7e = $(`<div id="html_d26c3bf2510e404aa6444cdd0bc7db7e" style="width: 100.0%; height: 100.0%;"><strong><font size="+1">Grand Canyon</font></strong><br/><u>South Rim is Open - North Rim is Temporarily Closed Due to a Wildfire (6/15/2020)</u><br/>NOTE: The East Entrance to the park at Desert View, is CLOSED. You must use the South Entrance near the town of Tusayan to enter and exit the park. Entrance fees are charged. THE NORTH RIM IS TEMPORARILY CLOSED DUE TO A WILDFIRE.<br/><i><a href=https://www.nps.gov/grca/planyourvisit/grand-canyon-national-park-public-health-update.htm>Alert Information</i></a><br/><a href=https://www.nps.gov/grca/index.htm>Visit the NPS Website for More Information</a></div>`)[0];
+            popup_c543ee89d70840d69ce8d2bf9eac8e14.setContent(html_d26c3bf2510e404aa6444cdd0bc7db7e);
+        
+
+        marker_c458a89ab27c47c69557685b76c0b6b0.bindPopup(popup_c543ee89d70840d69ce8d2bf9eac8e14)
+        ;
+
+        
+    
+    
+            var marker_2d3eb2cf6837462cb9f5d0cec45b3f04 = L.marker(
+                [38.94617378, -114.2579782],
+                {"name": "other"}
+            ).addTo(feature_group_1e31b61cffaf4b0f888af4b48c7c5174);
+        
+    
+            var icon_9581b846a091463189f280e2e4f86d8b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tree", "iconColor": "white", "markerColor": "orange", "prefix": "fa"}
+            );
+            marker_2d3eb2cf6837462cb9f5d0cec45b3f04.setIcon(icon_9581b846a091463189f280e2e4f86d8b);
+        
+    
+        var popup_dbcd1f49819046058605b43ad71a57f6 = L.popup({"maxWidth": 500});
+
+        
+            var html_4f554427ed4a405f9117ced9787ada53 = $(`<div id="html_4f554427ed4a405f9117ced9787ada53" style="width: 100.0%; height: 100.0%;"><strong><font size="+1">Great Basin</font></strong><br/><u>Phased reopening – some locations closed due to COVID-19</u><br/>We are working to increase access to the park in a phased approach. Great Basin National Park grounds, some campgrounds, restrooms, trails, cafe, and park roads are open. Visitor centers, and some campgrounds remain close<br/><i><a href=https://www.nps.gov/grba/planyourvisit/great-basin-national-park-public-health-update.htm>Alert Information</i></a><br/><u>Wheeler Peak Campground will be closed 10/07/2019 through summer of 2020</u><br/>Improvements will be made to campsites, water system and restoring the historic landscape. Visit one of the park's other campgrounds or try a new places to camp outside the park. https://www.nps.gov/grba/planyourvisit/camping-outside-of-the-park.htm<br/><a href=https://www.nps.gov/grba/index.htm>Visit the NPS Website for More Information</a></div>`)[0];
+            popup_dbcd1f49819046058605b43ad71a57f6.setContent(html_4f554427ed4a405f9117ced9787ada53);
+        
+
+        marker_2d3eb2cf6837462cb9f5d0cec45b3f04.bindPopup(popup_dbcd1f49819046058605b43ad71a57f6)
+        ;
+
+        
+    
+    
+            var marker_08e314c46afe47449de14afbdb088f75 = L.marker(
+                [37.79256812, -105.5919572],
+                {"name": "other"}
+            ).addTo(feature_group_1e31b61cffaf4b0f888af4b48c7c5174);
+        
+    
+            var icon_8c8eb7e6d2bd4c6aa3af4cda16ee6fc0 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tree", "iconColor": "white", "markerColor": "orange", "prefix": "fa"}
+            );
+            marker_08e314c46afe47449de14afbdb088f75.setIcon(icon_8c8eb7e6d2bd4c6aa3af4cda16ee6fc0);
+        
+    
+        var popup_7da2b82ebbef4c8aa8cb9c9251169d6f = L.popup({"maxWidth": 500});
+
+        
+            var html_fa3660335aef4fe0aea3ec33ec0e3222 = $(`<div id="html_fa3660335aef4fe0aea3ec33ec0e3222" style="width: 100.0%; height: 100.0%;"><strong><font size="+1">Great Sand Dunes</font></strong><br/><u>Park Open; Visitor Center Interior Closed; Campground and Backpacking Reopen June 17</u><br/>Great Sand Dunes is increasing recreational access through a phased approach following guidance from the White House, Centers for Disease Control and Prevention (CDC), and state and local public health authorities. Click 'more' for details.<br/><i><a href=https://www.nps.gov/grsa/learn/news/great-sand-dunes-to-implement-phase-2-of-the-park-s-re-opening-plan-on-june-17.htm>Alert Information</i></a><br/><a href=https://www.nps.gov/grsa/index.htm>Visit the NPS Website for More Information</a></div>`)[0];
+            popup_7da2b82ebbef4c8aa8cb9c9251169d6f.setContent(html_fa3660335aef4fe0aea3ec33ec0e3222);
+        
+
+        marker_08e314c46afe47449de14afbdb088f75.bindPopup(popup_7da2b82ebbef4c8aa8cb9c9251169d6f)
+        ;
+
+        
+    
+    
+            var marker_c3757af087584e3b8ea5eca4870745f8 = L.marker(
+                [35.60116374, -83.50818326],
+                {"name": "other"}
+            ).addTo(feature_group_1e31b61cffaf4b0f888af4b48c7c5174);
+        
+    
+            var icon_a3bc4dfeadfc4fb48bc420dce1fb7f0b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tree", "iconColor": "white", "markerColor": "orange", "prefix": "fa"}
+            );
+            marker_c3757af087584e3b8ea5eca4870745f8.setIcon(icon_a3bc4dfeadfc4fb48bc420dce1fb7f0b);
+        
+    
+        var popup_e1cdfdcb5b8749babc89aec0f8288910 = L.popup({"maxWidth": 500});
+
+        
+            var html_5973b7651d2b4cdab6e638c960514780 = $(`<div id="html_5973b7651d2b4cdab6e638c960514780" style="width: 100.0%; height: 100.0%;"><strong><font size="+1">Great Smoky Mountains</font></strong><br/><u>Road Closures Due to Weather Conditions</u><br/>Weather and road conditions can vary greatly in different elevations. Go to https://twitter.com/smokiesroadsnps for the latest road and facility closures.<br/><i><a href=https://twitter.com/smokiesroadsnps>Alert Information</i></a><br/><u>Cades Cove Bicycling Days</u><br/>Implementation of vehicle-free access along the Cades Cove Loop Road each Wednesday, from June 17 through September 30, as part of a pilot study to improve the visitor experience.<br/><i><a href=https://www.nps.gov/grsm/learn/news/park-implements-vehicle-free-wednesdays-in-cades-cove.htm>Alert Information</i></a><br/><u>Phased Reopening - Some locations closed due to COVID-19</u><br/>We are working to increase access to the park in a phased approach.<br/><i><a href=https://www.nps.gov/grsm/planyourvisit/conditions.htm>Alert Information</i></a><br/><a href=https://www.nps.gov/grsm/index.htm>Visit the NPS Website for More Information</a></div>`)[0];
+            popup_e1cdfdcb5b8749babc89aec0f8288910.setContent(html_5973b7651d2b4cdab6e638c960514780);
+        
+
+        marker_c3757af087584e3b8ea5eca4870745f8.bindPopup(popup_e1cdfdcb5b8749babc89aec0f8288910)
+        ;
+
+        
+    
+    
+            var marker_110cc672e03d4593b169abc8a837e14a = L.marker(
+                [31.92304462, -104.885527],
+                {"name": "other"}
+            ).addTo(feature_group_1e31b61cffaf4b0f888af4b48c7c5174);
+        
+    
+            var icon_803eb87ac05648aea59de50161a65d41 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tree", "iconColor": "white", "markerColor": "orange", "prefix": "fa"}
+            );
+            marker_110cc672e03d4593b169abc8a837e14a.setIcon(icon_803eb87ac05648aea59de50161a65d41);
+        
+    
+        var popup_2b1aa2f489fc48d78b88bf68e25ff765 = L.popup({"maxWidth": 500});
+
+        
+            var html_3c122f1814d64cce8494e331d2ad4dcb = $(`<div id="html_3c122f1814d64cce8494e331d2ad4dcb" style="width: 100.0%; height: 100.0%;"><strong><font size="+1">Guadalupe Mountains</font></strong><br/><u>Guadalupe Mountains National Park is temporarily closed as of April 17, 2020.</u><br/>Updated June 11, 2020 - Following guidance from the CDC, state and local health officials, and NPS Public Health Service officers, Guadalupe Mountains National Park is temporarily closed. All trails, camping, and backcountry use are prohibited.<br/><u>Restrictions on pet(s) trail access - park policy for safety, resource protection and preservation</u><br/>Pets are not permitted on most trails or in the backcountry in Guadalupe Mountains National park. They are only allowed in areas accessed by vehicles, including roadsides, parking areas, picnic areas and campgrounds.<br/><i><a href=https://www.facebook.com/guadalupe.mountains/photos/a.206361422744978.48037.120924901288631/1413538925360549/?type=3&theater>Alert Information</i></a><br/><u>Entrance fees increase effective Wednesday, Jan 1 2020.</u><br/>Entrance fees will be raised from $7 per person to $10 per person and include access to the park's facilities & trail system for seven days.<br/><a href=https://www.nps.gov/gumo/index.htm>Visit the NPS Website for More Information</a></div>`)[0];
+            popup_2b1aa2f489fc48d78b88bf68e25ff765.setContent(html_3c122f1814d64cce8494e331d2ad4dcb);
+        
+
+        marker_110cc672e03d4593b169abc8a837e14a.bindPopup(popup_2b1aa2f489fc48d78b88bf68e25ff765)
+        ;
+
+        
+    
+    
+            var marker_aba28479ba9842ae9ef8d041ad597da0 = L.marker(
+                [20.70693015, -156.1591775],
+                {"name": "other"}
+            ).addTo(feature_group_1e31b61cffaf4b0f888af4b48c7c5174);
+        
+    
+            var icon_fb311cb96192499d8812e31a8d2d8d29 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tree", "iconColor": "white", "markerColor": "orange", "prefix": "fa"}
+            );
+            marker_aba28479ba9842ae9ef8d041ad597da0.setIcon(icon_fb311cb96192499d8812e31a8d2d8d29);
+        
+    
+        var popup_121d3ddafa0446f1958212244d2077ac = L.popup({"maxWidth": 500});
+
+        
+            var html_532f20532e5144e7a0c5eacc3d241d5f = $(`<div id="html_532f20532e5144e7a0c5eacc3d241d5f" style="width: 100.0%; height: 100.0%;"><strong><font size="+1">Haleakal&#257;</font></strong><br/><u>Wood lockers in cabins installed on November 1, 2018</u><br/>On November 1, 2018, a new wood locker system was implemented for cabin users. Each cabin houses 18 lockers, each stocked with three logs. Lockers assignments are issued by park staff.<br/><u>Protect Our Native Species</u><br/>To reduce the spread of non-native seeds and diseases, please clean your vehicles and any horse or stock trailers before traveling into the park.<br/><u>Phased Reopening – some locations closed due to COVID-19</u><br/>The NPS is working to increase access to the park in a phased approach. Limited Areas in the Summit District are open daily, 9 am- 5 pm. All visitor centers, the Kīpahulu District, the Crater trails and backcountry areas remain closed.  <br/><i><a href=https://www.nps.gov/hale/planyourvisit/conditions.htm>Alert Information</i></a><br/><a href=https://www.nps.gov/hale/index.htm>Visit the NPS Website for More Information</a></div>`)[0];
+            popup_121d3ddafa0446f1958212244d2077ac.setContent(html_532f20532e5144e7a0c5eacc3d241d5f);
+        
+
+        marker_aba28479ba9842ae9ef8d041ad597da0.bindPopup(popup_121d3ddafa0446f1958212244d2077ac)
+        ;
+
+        
+    
+    
+            var marker_8c08f2d1bbc446e49f15edfdeda768ef = L.marker(
+                [19.3355036, -155.4700257],
+                {"name": "other"}
+            ).addTo(feature_group_1e31b61cffaf4b0f888af4b48c7c5174);
+        
+    
+            var icon_4e17b20821ff4ac2b26c0d6bfc7d31ac = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tree", "iconColor": "white", "markerColor": "orange", "prefix": "fa"}
+            );
+            marker_8c08f2d1bbc446e49f15edfdeda768ef.setIcon(icon_4e17b20821ff4ac2b26c0d6bfc7d31ac);
+        
+    
+        var popup_be40aa9f796a4120a7ccb767ff22dffd = L.popup({"maxWidth": 500});
+
+        
+            var html_a6cb1b76789e41bdbaacb0bc2f8b7889 = $(`<div id="html_a6cb1b76789e41bdbaacb0bc2f8b7889" style="width: 100.0%; height: 100.0%;"><strong><font size="+1">Hawai'i Volcanoes</font></strong><br/><u>Phased Reopening – Some Areas Remain Closed Due to COVID-19</u><br/>We are working to increase access to the park in a phased approach. The summit areas of Kīlauea, backcountry, all campgrounds and most visitor services and restrooms remain closed.<br/><i><a href=https://www.nps.gov/havo/planyourvisit/conditions.htm>Alert Information</i></a><br/><u>Vehicles over 20,000 GVW are restricted from entering the park, until further notice</u><br/>Many park roads remain damaged and Federal Highways has advised that we restrict weight until repairs can be made. Exceptions for schools may apply, consult the Education page for more details.<br/><u>Phase Two Reopening – Some Areas Remain Closed Due to COVID-19</u><br/>We are working to reopen the park in phases. Chain of Craters Road past Mauna Ulu, overnight use of the backcountry, many visitor services and restrooms remain closed.<br/><i><a href=https://www.nps.gov/havo/planyourvisit/conditions.htm>Alert Information</i></a><br/><a href=https://www.nps.gov/havo/index.htm>Visit the NPS Website for More Information</a></div>`)[0];
+            popup_be40aa9f796a4120a7ccb767ff22dffd.setContent(html_a6cb1b76789e41bdbaacb0bc2f8b7889);
+        
+
+        marker_8c08f2d1bbc446e49f15edfdeda768ef.bindPopup(popup_be40aa9f796a4120a7ccb767ff22dffd)
+        ;
+
+        
+    
+    
+            var marker_309a869d7d9e4aadbd8caa0c5a131cf1 = L.marker(
+                [34.52414366, -93.06332936],
+                {"name": "other"}
+            ).addTo(feature_group_1e31b61cffaf4b0f888af4b48c7c5174);
+        
+    
+            var icon_ce08028de31e4b2eb966d60fbfeb1713 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tree", "iconColor": "white", "markerColor": "orange", "prefix": "fa"}
+            );
+            marker_309a869d7d9e4aadbd8caa0c5a131cf1.setIcon(icon_ce08028de31e4b2eb966d60fbfeb1713);
+        
+    
+        var popup_65f75d68e8d5444c8b9d302e68be9fe1 = L.popup({"maxWidth": 500});
+
+        
+            var html_e040473abb7e4019b65b84c6bc808ec0 = $(`<div id="html_e040473abb7e4019b65b84c6bc808ec0" style="width: 100.0%; height: 100.0%;"><strong><font size="+1">Hot Springs</font></strong><br/><u>Phased reopening - some locations closed due to COVID-19</u><br/>We are working to increase access to the park in a phased approach. Our trails and information desk are open. Beginning May 29th, Gulpha Gorge Campground will reopen. The Fordyce Visitor Center and Administration Building remain closed.<br/><i><a href=https://www.nps.gov/hosp/learn/news/newsreleases.htm>Alert Information</i></a><br/><a href=https://www.nps.gov/hosp/index.htm>Visit the NPS Website for More Information</a></div>`)[0];
+            popup_65f75d68e8d5444c8b9d302e68be9fe1.setContent(html_e040473abb7e4019b65b84c6bc808ec0);
+        
+
+        marker_309a869d7d9e4aadbd8caa0c5a131cf1.bindPopup(popup_65f75d68e8d5444c8b9d302e68be9fe1)
+        ;
+
+        
+    
+    
+            var marker_7e036fdfbd984a55b9cf70096327a032 = L.marker(
+                [41.63765525, -87.09647445],
+                {"name": "other"}
+            ).addTo(feature_group_1e31b61cffaf4b0f888af4b48c7c5174);
+        
+    
+            var icon_21530466c4d24aaf98dcc664190a1c80 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tree", "iconColor": "white", "markerColor": "orange", "prefix": "fa"}
+            );
+            marker_7e036fdfbd984a55b9cf70096327a032.setIcon(icon_21530466c4d24aaf98dcc664190a1c80);
+        
+    
+        var popup_2acfee968d854327bb8ae53978f492fb = L.popup({"maxWidth": 500});
+
+        
+            var html_351fdb58bdef47dabdc9d0c3adaa29c0 = $(`<div id="html_351fdb58bdef47dabdc9d0c3adaa29c0" style="width: 100.0%; height: 100.0%;"><strong><font size="+1">Indiana Dunes</font></strong><br/><u>Weather Watchers</u><br/>Know your beach's weather conditions and please use caution.<br/><i><a href=https://forecast.weather.gov/MapClick.php?lat=41.6109&lon=-87.2225#.XWQzbui6OUn>Alert Information</i></a><br/><u>COVID-19 Closures and Status Updates for Public Safety</u><br/>Park closures are in a constant state of flux, and we must adjust to national and state CoronaVirus (COVID-19) guidelines as they develop. Please follow the link below for our latest updates. For beach parking information call: 219-395-1003<br/><i><a href=https://www.nps.gov/indu/status.htm>Alert Information</i></a><br/><u>Unmanned Aircraft (e.g. model airplanes, quadcopters, drones)</u><br/>Launching, landing or operating unmanned aircraft from or on lands and waters administered by the National Park Service within the boundaries of Indiana Dunes National Park is prohibited except as approved in writing by the park.<br/><i><a href=https://www.nps.gov/articles/unmanned-aircraft-in-the-national-parks.htm>Alert Information</i></a><br/><a href=https://www.nps.gov/indu/index.htm>Visit the NPS Website for More Information</a></div>`)[0];
+            popup_2acfee968d854327bb8ae53978f492fb.setContent(html_351fdb58bdef47dabdc9d0c3adaa29c0);
+        
+
+        marker_7e036fdfbd984a55b9cf70096327a032.bindPopup(popup_2acfee968d854327bb8ae53978f492fb)
+        ;
+
+        
+    
+    
+            var marker_ba05cd5560054ac8ab0aa8f9e4e0f42e = L.marker(
+                [48.01145819, -88.82780657],
+                {"name": "other"}
+            ).addTo(feature_group_1e31b61cffaf4b0f888af4b48c7c5174);
+        
+    
+            var icon_168d002ce9384e3a87da8508ddac4303 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tree", "iconColor": "white", "markerColor": "orange", "prefix": "fa"}
+            );
+            marker_ba05cd5560054ac8ab0aa8f9e4e0f42e.setIcon(icon_168d002ce9384e3a87da8508ddac4303);
+        
+    
+        var popup_c8e53a6f8d9045ff8e86c3c5243faa9a = L.popup({"maxWidth": 500});
+
+        
+            var html_6dc6d8b20c5347cfbb5dab688a20d284 = $(`<div id="html_6dc6d8b20c5347cfbb5dab688a20d284" style="width: 100.0%; height: 100.0%;"><strong><font size="+1">Isle Royale</font></strong><br/><u>Due to COVID-19, No Visitor Ferry or Lodge Service for 2020</u><br/>The Ranger III, Voyageur II, Sea Hunter III, and Isle Royale Queen IV will not provide visitor ferry transportation this summer. Rock Harbor Lodge, including lodging, dining, marina services, gift shops and stores, will remain closed for the season.<br/><i><a href=https://www.nps.gov/isro/planyourvisit/conditions.htm>Alert Information</i></a><br/><u>Early and Late Season Boat Fuel</u><br/>Prior to the Rock Harbor Lodge opening (early season) and after the Lodge closes (late season), fuel service may be obtained at Windigo or Mott Island if park personnel are available (Mott: credit or check only; no cash accepted).<br/><u>Isle Royale National Park Houghton Headquarters & Visitor Center is Closed Until Further Notice</u><br/>In response to the developing Coronavirus (COVID-19) pandemic, Isle Royale National Park has closed the Houghton Visitor Center and Headquarters complex. This closure will be evaluated daily as conditions evolve.<br/><i><a href=https://www.nps.gov/isro/planyourvisit/conditions.htm>Alert Information</i></a><br/><u>Due to COVID-19, Isle Royale is Closed Until Further Notice</u><br/>Following guidance from the White House, Centers for Disease Control and Prevention (CDC), and the State of Michigan, Isle Royale National Park is delaying its seasonal opening until further notice.<br/><i><a href=https://www.nps.gov/isro/planyourvisit/conditions.htm>Alert Information</i></a><br/><u>Rock Harbor Lighthouse Tower Closed</u><br/>The Rock Harbor Lighthouse Tower is closed due to the wooden stairway needing maintenance. At this time, there is no known reopening date. The Exhibit area in the primary building remains open and accessible.<br/><a href=https://www.nps.gov/isro/index.htm>Visit the NPS Website for More Information</a></div>`)[0];
+            popup_c8e53a6f8d9045ff8e86c3c5243faa9a.setContent(html_6dc6d8b20c5347cfbb5dab688a20d284);
+        
+
+        marker_ba05cd5560054ac8ab0aa8f9e4e0f42e.bindPopup(popup_c8e53a6f8d9045ff8e86c3c5243faa9a)
+        ;
+
+        
+    
+    
+            var marker_c3971c7dc12d4d26a85ae5f7b0557686 = L.marker(
+                [33.91418525, -115.8398125],
+                {"name": "other"}
+            ).addTo(feature_group_1e31b61cffaf4b0f888af4b48c7c5174);
+        
+    
+            var icon_31fe739a785d4f43818bd8e4d2d8246a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tree", "iconColor": "white", "markerColor": "orange", "prefix": "fa"}
+            );
+            marker_c3971c7dc12d4d26a85ae5f7b0557686.setIcon(icon_31fe739a785d4f43818bd8e4d2d8246a);
+        
+    
+        var popup_7bfa707e0fd04763a3bab1da35b51b6d = L.popup({"maxWidth": 500});
+
+        
+            var html_962519a460224d4f93337c8f50651c61 = $(`<div id="html_962519a460224d4f93337c8f50651c61" style="width: 100.0%; height: 100.0%;"><strong><font size="+1">Joshua Tree</font></strong><br/><u>Group Campsites</u><br/>Following guidance from the CDC and state and local public health authorities, group sites are temporarily limited to 25 occupants temporarily.<br/><u>Black Eagle Mine Road is Closed</u><br/>Black Eagle Mine Road is closed long-term.<br/><a href=https://www.nps.gov/jotr/index.htm>Visit the NPS Website for More Information</a></div>`)[0];
+            popup_7bfa707e0fd04763a3bab1da35b51b6d.setContent(html_962519a460224d4f93337c8f50651c61);
+        
+
+        marker_c3971c7dc12d4d26a85ae5f7b0557686.bindPopup(popup_7bfa707e0fd04763a3bab1da35b51b6d)
+        ;
+
+        
+    
+    
+            var marker_523a2f770ac04ed98f7fcf0546c41ba1 = L.marker(
+                [58.62235668, -155.0126574],
+                {"name": "other"}
+            ).addTo(feature_group_1e31b61cffaf4b0f888af4b48c7c5174);
+        
+    
+            var icon_d1429ce130604d538f3f865684359106 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tree", "iconColor": "white", "markerColor": "orange", "prefix": "fa"}
+            );
+            marker_523a2f770ac04ed98f7fcf0546c41ba1.setIcon(icon_d1429ce130604d538f3f865684359106);
+        
+    
+        var popup_65315ec6da7e454b80fe65de2fd6adad = L.popup({"maxWidth": 500});
+
+        
+            var html_e6dbdbfa40cc4fce99791e3b6d4159f8 = $(`<div id="html_e6dbdbfa40cc4fce99791e3b6d4159f8" style="width: 100.0%; height: 100.0%;"><strong><font size="+1">Katmai</font></strong><br/><u>Brooks Camp Closed Until July 1, 2020</u><br/>Brooks Camp Developed Area is closed until July 1. Return to full operations within the BCDA will be phased, services may be limited. Earliest possible start dates: July 1 day use, July 23 overnight (lodge/campground). Click more for additional details.<br/><i><a href=https://www.nps.gov/katm/learn/news/bcda-closure-update.htm>Alert Information</i></a><br/><a href=https://www.nps.gov/katm/index.htm>Visit the NPS Website for More Information</a></div>`)[0];
+            popup_65315ec6da7e454b80fe65de2fd6adad.setContent(html_e6dbdbfa40cc4fce99791e3b6d4159f8);
+        
+
+        marker_523a2f770ac04ed98f7fcf0546c41ba1.bindPopup(popup_65315ec6da7e454b80fe65de2fd6adad)
+        ;
+
+        
+    
+    
+            var marker_96736486ca4c4714ada2ee93a6ac9bff = L.marker(
+                [59.81804414, -150.106502],
+                {"name": "other"}
+            ).addTo(feature_group_1e31b61cffaf4b0f888af4b48c7c5174);
+        
+    
+            var icon_700f1c5d0b884a269a0e41f65e964265 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tree", "iconColor": "white", "markerColor": "orange", "prefix": "fa"}
+            );
+            marker_96736486ca4c4714ada2ee93a6ac9bff.setIcon(icon_700f1c5d0b884a269a0e41f65e964265);
+        
+    
+        var popup_c769e73731cb46089fec54a2967ade29 = L.popup({"maxWidth": 500});
+
+        
+            var html_87938d7fdcb74efb8e87f6966c67be93 = $(`<div id="html_87938d7fdcb74efb8e87f6966c67be93" style="width: 100.0%; height: 100.0%;"><strong><font size="+1">Kenai Fjords</font></strong><br/><u>Phased reopening – some locations closed due to COVID-19</u><br/>We are working to increase access to the park in a phased approach. Trails within the Exit Glacier area, including the Harding Icefield Trail are open. The Exit Glacier Campground remains closed. <br/><i><a href=https://www.nps.gov/kefj/learn/news/2020-kenai-fjords-national-park-operations.htm>Alert Information</i></a><br/><u>Toe of Exit Glacier, Ice Fall Hazard Zone</u><br/>An ice fall hazard zone has been identified at the toe and sides of Exit Glacier, due to tall blocks and slabs of ice. For your safety, entry into this zone is prohibited. Please do not continue past ice fall hazard signs and see photo for more details.<br/><i><a href=https://www.nps.gov/kefj/planyourvisit/conditions.htm#CP_JUMP_5488509>Alert Information</i></a><br/><a href=https://www.nps.gov/kefj/index.htm>Visit the NPS Website for More Information</a></div>`)[0];
+            popup_c769e73731cb46089fec54a2967ade29.setContent(html_87938d7fdcb74efb8e87f6966c67be93);
+        
+
+        marker_96736486ca4c4714ada2ee93a6ac9bff.bindPopup(popup_c769e73731cb46089fec54a2967ade29)
+        ;
+
+        
+    
+    
+            var marker_851431c1a8a84a7cbb5329d166e267c2 = L.marker(
+                [67.35631336, -159.2002293],
+                {"name": "other"}
+            ).addTo(feature_group_1e31b61cffaf4b0f888af4b48c7c5174);
+        
+    
+            var icon_a3ffd4eb89704cfb8dd9a6e0d9270cce = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tree", "iconColor": "white", "markerColor": "orange", "prefix": "fa"}
+            );
+            marker_851431c1a8a84a7cbb5329d166e267c2.setIcon(icon_a3ffd4eb89704cfb8dd9a6e0d9270cce);
+        
+    
+        var popup_505304a1a3a240fcadf458a5333d9f73 = L.popup({"maxWidth": 500});
+
+        
+            var html_bff43ce473d5482b8d0466a15072a4ac = $(`<div id="html_bff43ce473d5482b8d0466a15072a4ac" style="width: 100.0%; height: 100.0%;"><strong><font size="+1">Kobuk Valley</font></strong><br/><u>Northwest Arctic Heritage Center Closed</u><br/>As a public health precaution, the Northwest Arctic Heritage Center is temporarily closed for the safety of staff and visitors as of March 16th. Updates will be posted to the park website and social media channels.<br/><a href=https://www.nps.gov/kova/index.htm>Visit the NPS Website for More Information</a></div>`)[0];
+            popup_505304a1a3a240fcadf458a5333d9f73.setContent(html_bff43ce473d5482b8d0466a15072a4ac);
+        
+
+        marker_851431c1a8a84a7cbb5329d166e267c2.bindPopup(popup_505304a1a3a240fcadf458a5333d9f73)
+        ;
+
+        
+    
+    
+            var marker_a037d4e2cec9418f866044c993ffef28 = L.marker(
+                [60.57405857, -153.55535],
+                {"name": "other"}
+            ).addTo(feature_group_1e31b61cffaf4b0f888af4b48c7c5174);
+        
+    
+            var icon_44a94c762bce493a958779ccfa9650ad = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tree", "iconColor": "white", "markerColor": "orange", "prefix": "fa"}
+            );
+            marker_a037d4e2cec9418f866044c993ffef28.setIcon(icon_44a94c762bce493a958779ccfa9650ad);
+        
+    
+        var popup_e135ab356c78404ca33479187ea2b8c1 = L.popup({"maxWidth": 500});
+
+        
+            var html_c49b8409833b4d86b7388379cdbf1bb0 = $(`<div id="html_c49b8409833b4d86b7388379cdbf1bb0" style="width: 100.0%; height: 100.0%;"><strong><font size="+1">Lake Clark</font></strong><br/><u>Port Alsworth Park Headquarters and Visitor Center are closed</u><br/>Due to the COVID-19 outbreak & to protect visitors, local communities, & staff, these facilities and areas are closed until further notice. Staff are working. Please call (907) 781-2218 to leave a message for an employee to return your call.<br/><u>Richard Proenneke Historic Site and Hope Creek Campsite closed</u><br/>Due to the COVID-19 outbreak, the Richard Proenneke Historic Cabin and the area within a half mile of the cabin including adjacent historic administrative cabins, Hope Creek Campsite, and all outdoor areas within the site are closed until further notice.<br/><a href=https://www.nps.gov/lacl/index.htm>Visit the NPS Website for More Information</a></div>`)[0];
+            popup_e135ab356c78404ca33479187ea2b8c1.setContent(html_c49b8409833b4d86b7388379cdbf1bb0);
+        
+
+        marker_a037d4e2cec9418f866044c993ffef28.bindPopup(popup_e135ab356c78404ca33479187ea2b8c1)
+        ;
+
+        
+    
+    
+            var marker_29400a0219124520af9a45255e31fa11 = L.marker(
+                [35.96622528, -114.3469067],
+                {"name": "other"}
+            ).addTo(feature_group_1e31b61cffaf4b0f888af4b48c7c5174);
+        
+    
+            var icon_18634c35aeea4eaebc45b86632e5f119 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tree", "iconColor": "white", "markerColor": "orange", "prefix": "fa"}
+            );
+            marker_29400a0219124520af9a45255e31fa11.setIcon(icon_18634c35aeea4eaebc45b86632e5f119);
+        
+    
+        var popup_c6dddca56da44a00b73f6dee6265848b = L.popup({"maxWidth": 500});
+
+        
+            var html_3eee7f07b3b3404394cc3be59e3e607c = $(`<div id="html_3eee7f07b3b3404394cc3be59e3e607c" style="width: 100.0%; height: 100.0%;"><strong><font size="+1">Lake Mead</font></strong><br/><u>Katherine Landing Fishing Pier is Temporarily Closed</u><br/>The Katherine Landing Fishing Pier is temporarily closed due to a mechanical failure. We will work to repair it as quickly as possible. We apologize for the inconvenience.<br/><u>Road Construction May Cause Delays</u><br/>A pavement preservation project has begun to improve roads. The project will include cleaning, patching, resurfacing and re-marking roads and parking areas in the southern area of the park.<br/><u>Launch Ramp Conditions</u><br/>Get the most current launch ramp and water elevation conditions<br/><i><a href=https://www.nps.gov/lake/learn/news/lakeconditions.htm>Alert Information</i></a><br/><u>2020 Fire Restrictions</u><br/>Seasonal fire restrictions are now in place at Lake Mead National Recreation Area. The restrictions are necessary to prevent wildfire during this period of extended drought and increased potential for wildland fires in Arizona and Nevada.<br/><i><a href=https://www.nps.gov/lake/learn/news/2020-fire-restrictions.htm>Alert Information</i></a><br/><u>What's Open and What's Closed</u><br/>Updated June 12: The park has implemented modifications to operations to support federal, state and local efforts to slow the spread of COVID-19.<br/><i><a href=https://www.nps.gov/lake/planyourvisit/temporary-operational-adjustments.htm>Alert Information</i></a><br/><a href=https://www.nps.gov/lake/index.htm>Visit the NPS Website for More Information</a></div>`)[0];
+            popup_c6dddca56da44a00b73f6dee6265848b.setContent(html_3eee7f07b3b3404394cc3be59e3e607c);
+        
+
+        marker_29400a0219124520af9a45255e31fa11.bindPopup(popup_c6dddca56da44a00b73f6dee6265848b)
+        ;
+
+        
+    
+    
+            var marker_29b91b78142c4ebba9317a7661a2be13 = L.marker(
+                [35.61926203, -101.6820066],
+                {"name": "other"}
+            ).addTo(feature_group_1e31b61cffaf4b0f888af4b48c7c5174);
+        
+    
+            var icon_7b6a9145279d4f038d3ae1a76fcd1024 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tree", "iconColor": "white", "markerColor": "orange", "prefix": "fa"}
+            );
+            marker_29b91b78142c4ebba9317a7661a2be13.setIcon(icon_7b6a9145279d4f038d3ae1a76fcd1024);
+        
+    
+        var popup_94b94f46c5214ead938f884b9f18827f = L.popup({"maxWidth": 500});
+
+        
+            var html_aa83f7503a4b4e91b0ff0f4c0d4a8776 = $(`<div id="html_aa83f7503a4b4e91b0ff0f4c0d4a8776" style="width: 100.0%; height: 100.0%;"><strong><font size="+1">Lake Meredith</font></strong><br/><u>This Website is Being Updated</u><br/>Currently, staff members are working to update this website. If you have any questions, contact park headquarters at 806-857-3151.<br/><u>Alibates Flint Quarries Visitor Center is Closed</u><br/>As of Wednesday March 25th, 2020 Alibates Flint Quarries will be closed to support federal, state, and local efforts to slow the spread of the novel coronavirus (COVID -19).<br/><a href=https://www.nps.gov/lamr/index.htm>Visit the NPS Website for More Information</a></div>`)[0];
+            popup_94b94f46c5214ead938f884b9f18827f.setContent(html_aa83f7503a4b4e91b0ff0f4c0d4a8776);
+        
+
+        marker_29b91b78142c4ebba9317a7661a2be13.bindPopup(popup_94b94f46c5214ead938f884b9f18827f)
+        ;
+
+        
+    
+    
+            var marker_2af28ad4651f45e9bcb283d5bc2bb248 = L.marker(
+                [48.17148735, -118.3513713],
+                {"name": "other"}
+            ).addTo(feature_group_1e31b61cffaf4b0f888af4b48c7c5174);
+        
+    
+            var icon_db579d0966c744e38e1794cbeaec6d84 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tree", "iconColor": "white", "markerColor": "orange", "prefix": "fa"}
+            );
+            marker_2af28ad4651f45e9bcb283d5bc2bb248.setIcon(icon_db579d0966c744e38e1794cbeaec6d84);
+        
+    
+        var popup_a1fb689d48d3403fab6b878cab14a23f = L.popup({"maxWidth": 500});
+
+        
+            var html_c92b6e67c2754b0283d6cf38f5c82b3c = $(`<div id="html_c92b6e67c2754b0283d6cf38f5c82b3c" style="width: 100.0%; height: 100.0%;"><strong><font size="+1">Lake Roosevelt</font></strong><br/><u>Pay by Credit Card Option Now Available</u><br/>You now have the option to pay by credit card through your smart phone at all National Park Service operated campgrounds and boat launches at Lake Roosevelt National Recreation Area.<br/><i><a href=https://www.nps.gov/laro/learn/news/pay-by-credit-card-option-now-available-for-lake-roosevelt-national-recreation-area-campsite-fees-and-boat-launch-permits.htm>Alert Information</i></a><br/><u>AIS Self-Certification Forms Mandatory at Beginning May 1st</u><br/>In an on-going effort to prevent aquatic invasive species, all boaters will be required to complete the aquatic invasive species (AIS) quagga/zebra mussel-free self-certification form beginning May 1st, 2020.<br/><i><a href=https://www.nps.gov/laro/learn/news/mussel-free-self-certification-forms-mandatory-at-lake-roosevelt-national-recreation-area-beginning-may-1st.htm>Alert Information</i></a><br/><u>Paving Project is Complete</u><br/>The Federal Highways Administration has completed the paving project begun in July 2019.<br/><u>Lake Roosevelt facilities are temporarily closed - Updated 06/01/2020</u><br/>Following guidance from the CDC and recommendations from state and local public health in consultation with NPS Public Health Service officers, Lake Roosevelt facilities are temporarily closed. Updates will be posted to the park website and social media.<br/><i><a href=https://www.nps.gov/laro/learn/news/lake-roosevelt-national-recreation-area-is-increasing-recreational-access.htm>Alert Information</i></a><br/><a href=https://www.nps.gov/laro/index.htm>Visit the NPS Website for More Information</a></div>`)[0];
+            popup_a1fb689d48d3403fab6b878cab14a23f.setContent(html_c92b6e67c2754b0283d6cf38f5c82b3c);
+        
+
+        marker_2af28ad4651f45e9bcb283d5bc2bb248.bindPopup(popup_a1fb689d48d3403fab6b878cab14a23f)
+        ;
+
+        
+    
+    
+            var marker_72e049ff54514272969a2e90bf97cc35 = L.marker(
+                [40.49354575, -121.4075993],
+                {"name": "other"}
+            ).addTo(feature_group_1e31b61cffaf4b0f888af4b48c7c5174);
+        
+    
+            var icon_71225223f6264016bb52d45603d4f27b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tree", "iconColor": "white", "markerColor": "orange", "prefix": "fa"}
+            );
+            marker_72e049ff54514272969a2e90bf97cc35.setIcon(icon_71225223f6264016bb52d45603d4f27b);
+        
+    
+        var popup_96f5011706bf4e308a1e11de70f08116 = L.popup({"maxWidth": 500});
+
+        
+            var html_f73e99db7b9a4d669ea48dcdaca26e3a = $(`<div id="html_f73e99db7b9a4d669ea48dcdaca26e3a" style="width: 100.0%; height: 100.0%;"><strong><font size="+1">Lassen Volcanic</font></strong><br/><u>Check for Modifications to Services & Facilities</u><br/>Before you travel, check the status of services and facilities that may be modified due to ongoing COVID-19 response.<br/><i><a href=https://www.nps.gov/lavo/planyourvisit/conditions.htm>Alert Information</i></a><br/><u>Bumpass Hell Trail Closed</u><br/>The Bumpass Hell Trail remains under seasonal closure due to snow hazards. An assessment of the trail condition will be made this week.<br/><i><a href=https://www.nps.gov/lavo/planyourvisit/hiking_bumpass_hell.htm>Alert Information</i></a><br/><u>NPS Coronavirus Response</u><br/>The NPS is closely monitoring the situation related to the novel (new) coronavirus (COVID-19). Visitors can be assured that national parks continue to maintain high standards related to the health and wellness of of staff and visitors.<br/><i><a href=https://www.nps.gov/lavo/planyourvisit/conditions.htm>Alert Information</i></a><br/><a href=https://www.nps.gov/lavo/index.htm>Visit the NPS Website for More Information</a></div>`)[0];
+            popup_96f5011706bf4e308a1e11de70f08116.setContent(html_f73e99db7b9a4d669ea48dcdaca26e3a);
+        
+
+        marker_72e049ff54514272969a2e90bf97cc35.bindPopup(popup_96f5011706bf4e308a1e11de70f08116)
+        ;
+
+        
+    
+    
+            var marker_cd02352ca6014cbbae60c3e733e99076 = L.marker(
+                [37.19760458, -86.13090198],
+                {"name": "other"}
+            ).addTo(feature_group_1e31b61cffaf4b0f888af4b48c7c5174);
+        
+    
+            var icon_d9e3d293bcdb4e89bea57f4d80ae0528 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tree", "iconColor": "white", "markerColor": "orange", "prefix": "fa"}
+            );
+            marker_cd02352ca6014cbbae60c3e733e99076.setIcon(icon_d9e3d293bcdb4e89bea57f4d80ae0528);
+        
+    
+        var popup_a08377f94ff64bb18b8d73bedd2971cb = L.popup({"maxWidth": 500});
+
+        
+            var html_1b4f92a72bb74b2ea1b32e0236595d75 = $(`<div id="html_1b4f92a72bb74b2ea1b32e0236595d75" style="width: 100.0%; height: 100.0%;"><strong><font size="+1">Mammoth Cave</font></strong><br/><u>Increase in Recreational Access to the Visitor Center & Cave Tours</u><br/>On Monday, June 1, the visitor center, self-guided tours, food/beverage opportunities and retail sales will reopen in the park.  On June 11, park campgrounds will reopen. For more details click here:  https://www.nps.gov/maca/planyourvisit/gocavetours.htm<br/><u>Green River Ferry Closure</u><br/>The Green River Ferry will resume service once vessel approval is granted from the US Coast Guard. South ramp extension work will begin in late summer and another temporary closure will then be needed to complete the Ferry Crossing Improvement Projects.<br/><i><a href=https://www.nps.gov/maca/green-river-ferry-improvement-projects.htm>Alert Information</i></a><br/><a href=https://www.nps.gov/maca/index.htm>Visit the NPS Website for More Information</a></div>`)[0];
+            popup_a08377f94ff64bb18b8d73bedd2971cb.setContent(html_1b4f92a72bb74b2ea1b32e0236595d75);
+        
+
+        marker_cd02352ca6014cbbae60c3e733e99076.bindPopup(popup_a08377f94ff64bb18b8d73bedd2971cb)
+        ;
+
+        
+    
+    
+            var marker_47bce2027b304764865ef48a7077fd42 = L.marker(
+                [37.23908345, -108.4624032],
+                {"name": "other"}
+            ).addTo(feature_group_1e31b61cffaf4b0f888af4b48c7c5174);
+        
+    
+            var icon_e2b593c4f27042c78b9170e026ddfe2f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tree", "iconColor": "white", "markerColor": "orange", "prefix": "fa"}
+            );
+            marker_47bce2027b304764865ef48a7077fd42.setIcon(icon_e2b593c4f27042c78b9170e026ddfe2f);
+        
+    
+        var popup_b198a0a2f23340919fdd2fd768bb8bad = L.popup({"maxWidth": 500});
+
+        
+            var html_e87c3d1adfcd420ab9217afdbadf2b25 = $(`<div id="html_e87c3d1adfcd420ab9217afdbadf2b25" style="width: 100.0%; height: 100.0%;"><strong><font size="+1">Mesa Verde</font></strong><br/><u>Cliff Dwelling Tours Cancelled Until Further Notice</u><br/>Given the uncertainty of our ability to provide tours in a manner consistent with CDC guidelines safeguarding the health and safety of visitors and staff, cliff dwelling tours are canceled until further notice. We will reevaluate as conditions change.<br/><i><a href=https://www.nps.gov/meve/planyourvisit/ops_updates_covid19.htm>Alert Information</i></a><br/><u>Phased Reopening of Mesa Verde National Park</u><br/>We are working to increase access to the park in a phased approach. The park will reopen at 9:00 am on May, 24, 2020. Some areas or facilities will remain closed while others are open on a self-guided basis. Please check our operational page for details.<br/><i><a href=https://www.nps.gov/meve/planyourvisit/ops_updates_covid19.htm>Alert Information</i></a><br/><a href=https://www.nps.gov/meve/index.htm>Visit the NPS Website for More Information</a></div>`)[0];
+            popup_b198a0a2f23340919fdd2fd768bb8bad.setContent(html_e87c3d1adfcd420ab9217afdbadf2b25);
+        
+
+        marker_47bce2027b304764865ef48a7077fd42.bindPopup(popup_b198a0a2f23340919fdd2fd768bb8bad)
+        ;
+
+        
+    
+    
+            var marker_62473f65c91946d397acc441ba9ab79a = L.marker(
+                [46.86075416, -121.7043885],
+                {"name": "other"}
+            ).addTo(feature_group_1e31b61cffaf4b0f888af4b48c7c5174);
+        
+    
+            var icon_25e33a44a78445fd96e52573c0b24bb7 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tree", "iconColor": "white", "markerColor": "orange", "prefix": "fa"}
+            );
+            marker_62473f65c91946d397acc441ba9ab79a.setIcon(icon_25e33a44a78445fd96e52573c0b24bb7);
+        
+    
+        var popup_eaa0a6f9e5a8489db3c534a030247305 = L.popup({"maxWidth": 500});
+
+        
+            var html_f131f4f3280e4f30998a5ac8f81313e6 = $(`<div id="html_f131f4f3280e4f30998a5ac8f81313e6" style="width: 100.0%; height: 100.0%;"><strong><font size="+1">Mount Rainier</font></strong><br/><u>Temporary Closure of Park Facilities</u><br/>Following guidance from the CDC and state, local, and NPS public health officers, as of June 6 park visitor centers & lodges remain closed. Roads normally open this time of the year have re-opened, along with associated trailheads.<br/><i><a href=https://www.nps.gov/mora/planyourvisit/conditions.htm>Alert Information</i></a><br/><a href=https://www.nps.gov/mora/index.htm>Visit the NPS Website for More Information</a></div>`)[0];
+            popup_eaa0a6f9e5a8489db3c534a030247305.setContent(html_f131f4f3280e4f30998a5ac8f81313e6);
+        
+
+        marker_62473f65c91946d397acc441ba9ab79a.bindPopup(popup_eaa0a6f9e5a8489db3c534a030247305)
+        ;
+
+        
+    
+    
+            var marker_8e43b4717024403681bc0cfdd5d32435 = L.marker(
+                [-14.22865935, -169.8503777],
+                {"name": "other"}
+            ).addTo(feature_group_1e31b61cffaf4b0f888af4b48c7c5174);
+        
+    
+            var icon_eec9dfb26dc847f28e28ca0f3023bf85 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tree", "iconColor": "white", "markerColor": "orange", "prefix": "fa"}
+            );
+            marker_8e43b4717024403681bc0cfdd5d32435.setIcon(icon_eec9dfb26dc847f28e28ca0f3023bf85);
+        
+    
+        var popup_0ba0f490c5ef43d99c100bee62ca4504 = L.popup({"maxWidth": 500});
+
+        
+            var html_0fd7bb0c46d9457e92c21305e0b696f1 = $(`<div id="html_0fd7bb0c46d9457e92c21305e0b696f1" style="width: 100.0%; height: 100.0%;"><strong><font size="+1">National Park of American Samoa</font></strong><br/><u>Travel Information 1</u><br/>Due to the COVID-19 outbreak, the American Samoa government has temporarily suspended all Hawaiian Airline flights for 30-days all between Honolulu and American Samoa.<br/><u>Travel Information 2</u><br/>Due to border restrictions currently in place, Samoa Airways has also suspended operating services from Pago Pago to Apia.<br/><u>Temporary Visitor Center Closure</u><br/>Following guidance from the CDC and recommendations from local public health authorities in consultation with NPS Public Health Service Officers, the Visitor Center in Pago Pago is temporarily closed as of March 16. Check website/social media for updates.<br/><u>Coronavirus Information</u><br/>The American Samoan Government issued a travel restriction on those coming from/transiting through US states with confirmed coronavirus cases. Must spend 14-days in Hawaii and acquire health clearance 3-days before entry into American Samoa.<br/><a href=https://www.nps.gov/npsa/index.htm>Visit the NPS Website for More Information</a></div>`)[0];
+            popup_0ba0f490c5ef43d99c100bee62ca4504.setContent(html_0fd7bb0c46d9457e92c21305e0b696f1);
+        
+
+        marker_8e43b4717024403681bc0cfdd5d32435.bindPopup(popup_0ba0f490c5ef43d99c100bee62ca4504)
+        ;
+
+        
+    
+    
+            var marker_c506fb64068748419609a8de4f4bf24d = L.marker(
+                [40.6631915953388, -74.0451049804688],
+                {"name": "other"}
+            ).addTo(feature_group_1e31b61cffaf4b0f888af4b48c7c5174);
+        
+    
+            var icon_15ebc86043fc40b392cbf86600fe9c24 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tree", "iconColor": "white", "markerColor": "orange", "prefix": "fa"}
+            );
+            marker_c506fb64068748419609a8de4f4bf24d.setIcon(icon_15ebc86043fc40b392cbf86600fe9c24);
+        
+    
+        var popup_d673d4e0a1b243c8876ac6c4e9cf6d7e = L.popup({"maxWidth": 500});
+
+        
+            var html_a195ccb9d8df4373a4f26bd78c4dccef = $(`<div id="html_a195ccb9d8df4373a4f26bd78c4dccef" style="width: 100.0%; height: 100.0%;"><strong><font size="+1">National Parks of New York Harbor</font></strong><br/><br/><a href=https://www.nps.gov/npnh/index.htm>Visit the NPS Website for More Information</a></div>`)[0];
+            popup_d673d4e0a1b243c8876ac6c4e9cf6d7e.setContent(html_a195ccb9d8df4373a4f26bd78c4dccef);
+        
+
+        marker_c506fb64068748419609a8de4f4bf24d.bindPopup(popup_d673d4e0a1b243c8876ac6c4e9cf6d7e)
+        ;
+
+        
+    
+    
+            var marker_397e4135c08a44b8842f70fc1d96a7a3 = L.marker(
+                [48.71171756, -121.2069423],
+                {"name": "other"}
+            ).addTo(feature_group_1e31b61cffaf4b0f888af4b48c7c5174);
+        
+    
+            var icon_49ba6dbdd981441e833816d588be1910 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tree", "iconColor": "white", "markerColor": "orange", "prefix": "fa"}
+            );
+            marker_397e4135c08a44b8842f70fc1d96a7a3.setIcon(icon_49ba6dbdd981441e833816d588be1910);
+        
+    
+        var popup_67a72240612d4540a7a7f2cab7e694de = L.popup({"maxWidth": 500});
+
+        
+            var html_061d815490df4bb1b9f0cafbd06ab6dd = $(`<div id="html_061d815490df4bb1b9f0cafbd06ab6dd" style="width: 100.0%; height: 100.0%;"><strong><font size="+1">North Cascades</font></strong><br/><u>Temporary Closures for Peregrine Nesting</u><br/>The established climbing management areas identified below are closed to all public use from March 1, 2020 to July 15, 2020 to protect peregrine falcon nesting aeries.  Newhalem Crag East and  Newhalem Crag West (Ryan’s Wall)<br/><i><a href=https://www.nps.gov/noca/learn/news/temporary-closures-for-peregrine-nesting-2020.htm?fbclid=IwAR1bOR4DLjjsHcwb4EL9MgIXFUmIOIIdqU1vf--zsSrmKEpIcIY1sxjCYrA>Alert Information</i></a><br/><u>Increased Recreational Access</u><br/>The park complex is increasing recreational access for overnight use. Campgrounds, the Wilderness Information Center, and backcountry campsites will open beginning June 12. Visitor centers, group campsites, and the Cascade River Road remain closed.<br/><i><a href=https://www.nps.gov/noca/learn/news/north-cascades-national-park-service-complex-increases-recreational-access-to-more-areas.htm>Alert Information</i></a><br/><a href=https://www.nps.gov/noca/index.htm>Visit the NPS Website for More Information</a></div>`)[0];
+            popup_67a72240612d4540a7a7f2cab7e694de.setContent(html_061d815490df4bb1b9f0cafbd06ab6dd);
+        
+
+        marker_397e4135c08a44b8842f70fc1d96a7a3.bindPopup(popup_67a72240612d4540a7a7f2cab7e694de)
+        ;
+
+        
+    
+    
+            var marker_f35141ab75754924bef30116e51f0aa1 = L.marker(
+                [47.80392754, -123.6663848],
+                {"name": "other"}
+            ).addTo(feature_group_1e31b61cffaf4b0f888af4b48c7c5174);
+        
+    
+            var icon_d2040c42311d4e7293fc329387d56222 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tree", "iconColor": "white", "markerColor": "orange", "prefix": "fa"}
+            );
+            marker_f35141ab75754924bef30116e51f0aa1.setIcon(icon_d2040c42311d4e7293fc329387d56222);
+        
+    
+        var popup_f38aceb2d8374a169ce90d01754080ed = L.popup({"maxWidth": 500});
+
+        
+            var html_60fe34f30c1842fda547bb884dd0be72 = $(`<div id="html_60fe34f30c1842fda547bb884dd0be72" style="width: 100.0%; height: 100.0%;"><strong><font size="+1">Olympic</font></strong><br/><u>Park Concessions Opening Schedule and Information</u><br/>Please visit the concession websites for updates on reopening and operating status. Kalaloch Lodge info at https://www.thekalalochlodge.com/covid-19-updates. See "More" link below for Aramark concessions (Lake Crescent Lodge, Log Cabin, & Sol Duc Resort)<br/><i><a href=https://www.olympicnationalparks.com/alerts/2020/covid-19-guest-updates/>Alert Information</i></a><br/><u>Spruce Railroad Trail at Lake Crescent Closed for Construction</u><br/>The final phase of work on the trail will be completed by Oct/Nov 2020. The trail is closed to all use for public safety due to heavy equipment and truck traffic. Devil’s Punchbowl is only accessible by boat.<br/><i><a href=https://www.nps.gov/olym/learn/news/spruce-railroad-trail-closure-at-lake-crescent-to-begin-monday-march-9.htm>Alert Information</i></a><br/><u>Update to Temporary Recreational Fishing Closure- Additional park waters reopen June 10</u><br/>The following park waters are open to recreational fishing: Kalaloch, Cedar, Goodman and Mosquito creeks; Lake Crescent; Sol Duc, Gray Wolf, Dosewallips, Duckabush, and North Fork Skokomish rivers; and mountain lakes per normal fishing seasons/regulations<br/><i><a href=https://www.nps.gov/olym/planyourvisit/fishing.htm>Alert Information</i></a><br/><u>Shi Shi Trailhead and Second Beach Trailhead Closures</u><br/>The Makah Tribe has closed the Makah Reservation & Shi Shi Beach Trailhead to the general public until further notice (see makah.com). The Quileute Tribe has closed the Quileute Reservation to the general public which includes the Second Beach Trailhead.<br/><i><a href=https://www.nps.gov/olym/planyourvisit/wilderness-trail-conditions.htm#onthisPage-4>Alert Information</i></a><br/><u>Phased reopening – some locations closed due to COVID-19</u><br/>We are working to increase access to the park in a phased approach. Campgrounds and visitor centers remain closed. The Hurricane Ridge Road remains closed. Check the Alerts & Conditions webpage for an updated report on the status of park areas.<br/><i><a href=https://www.nps.gov/olym/planyourvisit/conditions.htm>Alert Information</i></a><br/><a href=https://www.nps.gov/olym/index.htm>Visit the NPS Website for More Information</a></div>`)[0];
+            popup_f38aceb2d8374a169ce90d01754080ed.setContent(html_60fe34f30c1842fda547bb884dd0be72);
+        
+
+        marker_f35141ab75754924bef30116e51f0aa1.bindPopup(popup_f38aceb2d8374a169ce90d01754080ed)
+        ;
+
+        
+    
+    
+            var marker_1721af2beae644dcabbbedf45a891822 = L.marker(
+                [36.49029208, -121.1813607],
+                {"name": "other"}
+            ).addTo(feature_group_1e31b61cffaf4b0f888af4b48c7c5174);
+        
+    
+            var icon_c7202844ed4a4c71a24d14de185af1ad = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tree", "iconColor": "white", "markerColor": "orange", "prefix": "fa"}
+            );
+            marker_1721af2beae644dcabbbedf45a891822.setIcon(icon_c7202844ed4a4c71a24d14de185af1ad);
+        
+    
+        var popup_1b4397a8f95f453daf20b2d91d4916f4 = L.popup({"maxWidth": 500});
+
+        
+            var html_b5a171fcafdf491d8319aa8769f0a913 = $(`<div id="html_b5a171fcafdf491d8319aa8769f0a913" style="width: 100.0%; height: 100.0%;"><strong><font size="+1">Pinnacles</font></strong><br/><u>Climbing Closure on Machete Ridge</u><br/>Climbing routes on Machete Ridge are temporarily closed to protect wildlife. See www.nps.gov/pinn/planyourvisit/advisory.htm for more details.<br/><i><a href=https://www.nps.gov/pinn/planyourvisit/advisory.htm>Alert Information</i></a><br/><u>Temporary Operational Guidelines due to COVID-19</u><br/>The park has implemented modifications to operations to support federal, state and local efforts to slow the spread of COVID-19.<br/><i><a href=https://www.nps.gov/pinn/planyourvisit/temporary-operational-guidelines.htm>Alert Information</i></a><br/><a href=https://www.nps.gov/pinn/index.htm>Visit the NPS Website for More Information</a></div>`)[0];
+            popup_1b4397a8f95f453daf20b2d91d4916f4.setContent(html_b5a171fcafdf491d8319aa8769f0a913);
+        
+
+        marker_1721af2beae644dcabbbedf45a891822.bindPopup(popup_1b4397a8f95f453daf20b2d91d4916f4)
+        ;
+
+        
+    
+    
+            var marker_3a562f9273874d66b0b7b6778b947ecf = L.marker(
+                [40.3556924, -105.6972879],
+                {"name": "other"}
+            ).addTo(feature_group_1e31b61cffaf4b0f888af4b48c7c5174);
+        
+    
+            var icon_6aa18fc47a814c87af8b1b97f93eb7f5 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tree", "iconColor": "white", "markerColor": "orange", "prefix": "fa"}
+            );
+            marker_3a562f9273874d66b0b7b6778b947ecf.setIcon(icon_6aa18fc47a814c87af8b1b97f93eb7f5);
+        
+    
+        var popup_384a3831bbca44c3bd42550b0ae76b6c = L.popup({"maxWidth": 500});
+
+        
+            var html_36db36460c644522b214f79bb446a132 = $(`<div id="html_36db36460c644522b214f79bb446a132" style="width: 100.0%; height: 100.0%;"><strong><font size="+1">Rocky Mountain</font></strong><br/><u>Wild Basin is closed</u><br/>At this stage of Rocky's phased reopening, Wild Basin Road and the Wild Basin area are closed.<br/><u>Reservations required to enter Rocky Mountain National Park</u><br/>A timed entry permit or camping reservation is required to enter Rocky Mountain National Park in a private vehicle between the hours of 6 a.m. and 5 p.m.<br/><i><a href=https://www.nps.gov/romo/planyourvisit/fees.htm>Alert Information</i></a><br/><u>Phased reopening – some locations closed due to COVID-19</u><br/>We are working to increase access to the park in a phased approach. Rocky Mountain National Park is open. Services are limited. Some areas and facilities remain closed. <br/><i><a href=https://www.nps.gov/romo/planyourvisit/conditions.htm#covid19>Alert Information</i></a><br/><a href=https://www.nps.gov/romo/index.htm>Visit the NPS Website for More Information</a></div>`)[0];
+            popup_384a3831bbca44c3bd42550b0ae76b6c.setContent(html_36db36460c644522b214f79bb446a132);
+        
+
+        marker_3a562f9273874d66b0b7b6778b947ecf.bindPopup(popup_384a3831bbca44c3bd42550b0ae76b6c)
+        ;
+
+        
+    
+    
+            var marker_0f63f04bdedf46aa8b5e8280c5cd2c25 = L.marker(
+                [44.87357167, -66.96209908],
+                {"name": "other"}
+            ).addTo(feature_group_1e31b61cffaf4b0f888af4b48c7c5174);
+        
+    
+            var icon_049dc96d020c4689be5c822f616c21c9 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tree", "iconColor": "white", "markerColor": "orange", "prefix": "fa"}
+            );
+            marker_0f63f04bdedf46aa8b5e8280c5cd2c25.setIcon(icon_049dc96d020c4689be5c822f616c21c9);
+        
+    
+        var popup_a6dc410462384bdfaa4614244299fcb9 = L.popup({"maxWidth": 500});
+
+        
+            var html_7716067d6dc04471943ce9a796bc5d77 = $(`<div id="html_7716067d6dc04471943ce9a796bc5d77" style="width: 100.0%; height: 100.0%;"><strong><font size="+1">Roosevelt Campobello</font></strong><br/><br/><a href=https://www.nps.gov/roca/index.htm>Visit the NPS Website for More Information</a></div>`)[0];
+            popup_a6dc410462384bdfaa4614244299fcb9.setContent(html_7716067d6dc04471943ce9a796bc5d77);
+        
+
+        marker_0f63f04bdedf46aa8b5e8280c5cd2c25.bindPopup(popup_a6dc410462384bdfaa4614244299fcb9)
+        ;
+
+        
+    
+    
+            var marker_b5483cfba2b5472d864fafe2bd299963 = L.marker(
+                [32.20909636, -110.7574974],
+                {"name": "other"}
+            ).addTo(feature_group_1e31b61cffaf4b0f888af4b48c7c5174);
+        
+    
+            var icon_c85692b152c44e9cb710e13b150f34d4 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tree", "iconColor": "white", "markerColor": "orange", "prefix": "fa"}
+            );
+            marker_b5483cfba2b5472d864fafe2bd299963.setIcon(icon_c85692b152c44e9cb710e13b150f34d4);
+        
+    
+        var popup_45ee5b282ed94453b3b9fba86f730a99 = L.popup({"maxWidth": 500});
+
+        
+            var html_d7b339c965eb4d8794b4b1ec402f3ce9 = $(`<div id="html_d7b339c965eb4d8794b4b1ec402f3ce9" style="width: 100.0%; height: 100.0%;"><strong><font size="+1">Saguaro</font></strong><br/><u>Visitor Centers remain closed. Visitor information and restrooms available 8am - noon.</u><br/>All roads and trails are open. Visitor information and restrooms are available on the visitor center patios from 8am to noon daily.  Public programs and fee collection are suspended. Groups are limited to 10 or fewer people. No campfires permitted.<br/><i><a href=https://www.nps.gov/sagu/planyourvisit/conditions.htm>Alert Information</i></a><br/><a href=https://www.nps.gov/sagu/index.htm>Visit the NPS Website for More Information</a></div>`)[0];
+            popup_45ee5b282ed94453b3b9fba86f730a99.setContent(html_d7b339c965eb4d8794b4b1ec402f3ce9);
+        
+
+        marker_b5483cfba2b5472d864fafe2bd299963.bindPopup(popup_45ee5b282ed94453b3b9fba86f730a99)
+        ;
+
+        
+    
+    
+            var marker_8c738deb37d24c3c9310863a4c24951d = L.marker(
+                [34.09777606, -118.7708619],
+                {"name": "other"}
+            ).addTo(feature_group_1e31b61cffaf4b0f888af4b48c7c5174);
+        
+    
+            var icon_3f2aa32e03c44ef3aa2f5ee99163ba24 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tree", "iconColor": "white", "markerColor": "orange", "prefix": "fa"}
+            );
+            marker_8c738deb37d24c3c9310863a4c24951d.setIcon(icon_3f2aa32e03c44ef3aa2f5ee99163ba24);
+        
+    
+        var popup_36e47c4e150c46e68574c6c358acb5cc = L.popup({"maxWidth": 500});
+
+        
+            var html_f3d8c1d026694624b827107498d71c4f = $(`<div id="html_f3d8c1d026694624b827107498d71c4f" style="width: 100.0%; height: 100.0%;"><strong><font size="+1">Santa Monica Mountains</font></strong><br/><u>NPS trails closed due to Woolsey Fire damage</u><br/>NPS sites and trails Peter Strauss Ranch, Rocky Oaks, and Arroyo Sequit are closed until further notice.  For more info, please click "more" below & visit the Woolsey Fire webpage.<br/><i><a href=https://www.nps.gov/samo/learn/management/2018-woolsey-fire.htm>Alert Information</i></a><br/><u>Many NPS trails, parking lots are open effective 5/9/2020</u><br/>Solstice Canyon is open, including the parking lot. Restrooms at Santa Monica Mountains Visitor Ctr & Satwiwa are open. Both visitor centers (@King Gillette Ranch & Satwiwa) remain closed. Observe 6 feet of social distancing & wear a mask near others.<br/><a href=https://www.nps.gov/samo/index.htm>Visit the NPS Website for More Information</a></div>`)[0];
+            popup_36e47c4e150c46e68574c6c358acb5cc.setContent(html_f3d8c1d026694624b827107498d71c4f);
+        
+
+        marker_8c738deb37d24c3c9310863a4c24951d.bindPopup(popup_36e47c4e150c46e68574c6c358acb5cc)
+        ;
+
+        
+    
+    
+            var marker_e425dbbdb1b54a68a051ba9343855f8f = L.marker(
+                [36.71277299, -118.587429],
+                {"name": "other"}
+            ).addTo(feature_group_1e31b61cffaf4b0f888af4b48c7c5174);
+        
+    
+            var icon_b9f67e1bbead40198ae6f386f196ede3 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tree", "iconColor": "white", "markerColor": "orange", "prefix": "fa"}
+            );
+            marker_e425dbbdb1b54a68a051ba9343855f8f.setIcon(icon_b9f67e1bbead40198ae6f386f196ede3);
+        
+    
+        var popup_c6392a98025b477890347ac98ec6559d = L.popup({"maxWidth": 500});
+
+        
+            var html_6e62777d323246449b2288e260cbe69a = $(`<div id="html_6e62777d323246449b2288e260cbe69a" style="width: 100.0%; height: 100.0%;"><strong><font size="+1">Sequoia & Kings Canyon</font></strong><br/><u>Park Roads Open, But Facilities Closed</u><br/>Parks are open-no reservations required. Facilities such as campgrounds, visitor centers, restaurants, markets, wilderness permit stations, and lodging are temporarily closed to until further notice. Be prepared to be self-reliant if you visit the parks.<br/><i><a href=https://www.nps.gov/seki/planyourvisit/conditions.htm>Alert Information</i></a><br/><u>Expect Lines at Park Entrance Stations this Weekend</u><br/>On weekends and holidays, lines form at park entrance stations. To minimize waiting, enter the parks before 9:30 am or after 3:00 pm. Parking lots may fill at popular areas. Be prepared with water, snacks, a full tank of gas, and patience.<br/><i><a href=https://www.nps.gov/seki/planyourvisit/traffic.htm>Alert Information</i></a><br/><u>Road Construction Delays</u><br/>Construction delays of up to one hour expected along the Generals Highway between Grant Grove and Little Baldy Saddle (south of the Dorst Creek Campground turnoff). Additional delays expected for bridge work along Highway 180 near Boyden Cavern.<br/><i><a href=https://www.nps.gov/seki/planyourvisit/road-construction.htm>Alert Information</i></a><br/><a href=https://www.nps.gov/seki/index.htm>Visit the NPS Website for More Information</a></div>`)[0];
+            popup_c6392a98025b477890347ac98ec6559d.setContent(html_6e62777d323246449b2288e260cbe69a);
+        
+
+        marker_e425dbbdb1b54a68a051ba9343855f8f.bindPopup(popup_c6392a98025b477890347ac98ec6559d)
+        ;
+
+        
+    
+    
+            var marker_918a4e85e45844b0bf46d553626805a1 = L.marker(
+                [47.17777274, -103.4300083],
+                {"name": "other"}
+            ).addTo(feature_group_1e31b61cffaf4b0f888af4b48c7c5174);
+        
+    
+            var icon_624813994bf44e8f943a4724da27a977 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tree", "iconColor": "white", "markerColor": "orange", "prefix": "fa"}
+            );
+            marker_918a4e85e45844b0bf46d553626805a1.setIcon(icon_624813994bf44e8f943a4724da27a977);
+        
+    
+        var popup_14c53ca1628c48f38c66f183be0d52a4 = L.popup({"maxWidth": 500});
+
+        
+            var html_8aa75ac6ccc449b6907d16acd50ab6a1 = $(`<div id="html_8aa75ac6ccc449b6907d16acd50ab6a1" style="width: 100.0%; height: 100.0%;"><strong><font size="+1">Theodore Roosevelt</font></strong><br/><u>North Dakota Department of Health</u><br/>Follow the current state health orders by checking out the North Dakota Department of Health's website at this link.<br/><i><a href=https://www.health.nd.gov/news>Alert Information</i></a><br/><u>Theodore Roosevelt National Park is Open. Visitor Centers and Campgrounds Remain Closed.</u><br/>Visitors can access trails, picnic areas, roads and backcountry camping. All visitor centers and campgrounds remain closed to slow the spread of COVID-19.<br/><i><a href=https://www.nps.gov/thro/learn/news/theodore-roosevelt-national-park-to-begin-phased-access-may-9-2020.htm>Alert Information</i></a><br/><a href=https://www.nps.gov/thro/index.htm>Visit the NPS Website for More Information</a></div>`)[0];
+            popup_14c53ca1628c48f38c66f183be0d52a4.setContent(html_8aa75ac6ccc449b6907d16acd50ab6a1);
+        
+
+        marker_918a4e85e45844b0bf46d553626805a1.bindPopup(popup_14c53ca1628c48f38c66f183be0d52a4)
+        ;
+
+        
+    
+    
+            var marker_809c80e15db84bd68ed0e8bc2ce41730 = L.marker(
+                [18.34279656, -64.74194451],
+                {"name": "other"}
+            ).addTo(feature_group_1e31b61cffaf4b0f888af4b48c7c5174);
+        
+    
+            var icon_873e7c77ee35443bbb5de23e312b1273 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tree", "iconColor": "white", "markerColor": "orange", "prefix": "fa"}
+            );
+            marker_809c80e15db84bd68ed0e8bc2ce41730.setIcon(icon_873e7c77ee35443bbb5de23e312b1273);
+        
+    
+        var popup_aa5423e67edc4982a42c75774daefc4e = L.popup({"maxWidth": 500});
+
+        
+            var html_914d74ad63fb4be4bd97187c035546a4 = $(`<div id="html_914d74ad63fb4be4bd97187c035546a4" style="width: 100.0%; height: 100.0%;"><strong><font size="+1">Virgin Islands</font></strong><br/><u>Virgin Islands National Park Public Health Update</u><br/>June 6, 2020. Restrooms, showers, trails, beaches, parking areas, and waters are open. Cruz Bay Visitor Center is closed. Programs are cancelled, Food service, watersports and rentals at Trunk Bay are closed. Only mooring fees are being collected.<br/><a href=https://www.nps.gov/viis/index.htm>Visit the NPS Website for More Information</a></div>`)[0];
+            popup_aa5423e67edc4982a42c75774daefc4e.setContent(html_914d74ad63fb4be4bd97187c035546a4);
+        
+
+        marker_809c80e15db84bd68ed0e8bc2ce41730.bindPopup(popup_aa5423e67edc4982a42c75774daefc4e)
+        ;
+
+        
+    
+    
+            var marker_d303fbfd000d4f64b94277e6b751c2b8 = L.marker(
+                [48.48370609, -92.8382913],
+                {"name": "other"}
+            ).addTo(feature_group_1e31b61cffaf4b0f888af4b48c7c5174);
+        
+    
+            var icon_41efa8ef0c8c420083b1817d06dfbb44 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tree", "iconColor": "white", "markerColor": "orange", "prefix": "fa"}
+            );
+            marker_d303fbfd000d4f64b94277e6b751c2b8.setIcon(icon_41efa8ef0c8c420083b1817d06dfbb44);
+        
+    
+        var popup_57364070ab3447aebcf63d59b4ec1752 = L.popup({"maxWidth": 500});
+
+        
+            var html_5215bcf964cc473fa4c73f000490d4f1 = $(`<div id="html_5215bcf964cc473fa4c73f000490d4f1" style="width: 100.0%; height: 100.0%;"><strong><font size="+1">Voyageurs</font></strong><br/><u>Visitor Centers Closed</u><br/>The Rainy Lake Visitor Center, Kabetogama Lake Visitor Center, and Ash River Visitor Center are all currently closed and may be closed through the 2020 season.<br/><i><a href=https://www.nps.gov/voya/learn/news/voyageurs-national-park-is-beginning-to-increase-recreational-access-to-overnight-use.htm>Alert Information</i></a><br/><u>Voyageurs National Park Seeks Input on the Final Draft Environmental Assessment for Kettle Falls</u><br/>The National Park Service is seeking public feedback and comments on the environmental assessment for a site development plan for the Kettle Falls Historic District in Voyageurs National Park.<br/><i><a href=https://www.nps.gov/voya/learn/news/voyageurs-national-park-seeks-input-on-the-final-draft-environmental-assessment-for-kettle-falls.htm>Alert Information</i></a><br/><u>Voyageurs National Park Association web page offers help planning trip to Voyageurs</u><br/>Please visit the Voyageurs National Park Association web page for information on how to enjoy Voyageurs, stay safe, and protect the park and others.<br/><i><a href=https://www.voyageurs.org/visitorinfo>Alert Information</i></a><br/><a href=https://www.nps.gov/voya/index.htm>Visit the NPS Website for More Information</a></div>`)[0];
+            popup_57364070ab3447aebcf63d59b4ec1752.setContent(html_5215bcf964cc473fa4c73f000490d4f1);
+        
+
+        marker_d303fbfd000d4f64b94277e6b751c2b8.bindPopup(popup_57364070ab3447aebcf63d59b4ec1752)
+        ;
+
+        
+    
+    
+            var marker_dcf0efc007344d209944ba65a17b60d4 = L.marker(
+                [40.61359941, -122.6022657],
+                {"name": "other"}
+            ).addTo(feature_group_1e31b61cffaf4b0f888af4b48c7c5174);
+        
+    
+            var icon_ed96fade604a40b28827f28f34c3b79a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tree", "iconColor": "white", "markerColor": "orange", "prefix": "fa"}
+            );
+            marker_dcf0efc007344d209944ba65a17b60d4.setIcon(icon_ed96fade604a40b28827f28f34c3b79a);
+        
+    
+        var popup_894c8ffa2198442d8813fd098915bcc1 = L.popup({"maxWidth": 500});
+
+        
+            var html_70cfb0b37ae54c2a9765171e0d93cb5f = $(`<div id="html_70cfb0b37ae54c2a9765171e0d93cb5f" style="width: 100.0%; height: 100.0%;"><strong><font size="+1">Whiskeytown</font></strong><br/><u>06.15.20 Brandy Creek Beach is Closed Until Further Notice</u><br/>A bright green bloom appeared at the Brandy Creek Beach area over the weekend. The area is closed pending results of water testing.<br/><u> Phased Reopening – Some Locations Closed Due to COVID-19</u><br/>We are working to increase access to the park in a phased approach. Many trails, beaches, picnic areas and boat launches are open. The Visitors Center and some restrooms remain closed. <br/><i><a href=https://www.nps.gov/whis/planyourvisit/conditions.htm>Alert Information</i></a><br/><u>Partial Closure due to Carr Fire</u><br/>Some areas of the park remain closed. Please check Current Conditions for road openings and the Plan Your Visit section to see what trails and campgrounds are currently open.<br/><i><a href=https://www.nps.gov/whis/carrfire.htm>Alert Information</i></a><br/><a href=https://www.nps.gov/whis/index.htm>Visit the NPS Website for More Information</a></div>`)[0];
+            popup_894c8ffa2198442d8813fd098915bcc1.setContent(html_70cfb0b37ae54c2a9765171e0d93cb5f);
+        
+
+        marker_dcf0efc007344d209944ba65a17b60d4.bindPopup(popup_894c8ffa2198442d8813fd098915bcc1)
+        ;
+
+        
+    
+    
+            var marker_67e4abe550da493aae3b3a0efa1a1583 = L.marker(
+                [32.77907858, -106.3333461],
+                {"name": "other"}
+            ).addTo(feature_group_1e31b61cffaf4b0f888af4b48c7c5174);
+        
+    
+            var icon_cc8dbc7a3db44e76bc7baed0f0223f1e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tree", "iconColor": "white", "markerColor": "orange", "prefix": "fa"}
+            );
+            marker_67e4abe550da493aae3b3a0efa1a1583.setIcon(icon_cc8dbc7a3db44e76bc7baed0f0223f1e);
+        
+    
+        var popup_447bcc6d471a4c078eaa8d810bfe6417 = L.popup({"maxWidth": 500});
+
+        
+            var html_77ad39422c304dcfa6d1f7478e6bbf46 = $(`<div id="html_77ad39422c304dcfa6d1f7478e6bbf46" style="width: 100.0%; height: 100.0%;"><strong><font size="+1">White Sands</font></strong><br/><u>Park Closures</u><br/>From time to time the missile range that surrounds the park performs missile testing that may require the closure of the park or Highway 70. Please plan your visit around upcoming missile tests.<br/><i><a href=https://www.nps.gov/whsa/planyourvisit/park-closures.htm>Alert Information</i></a><br/><u>RV and Tractor Trailer Parking at the Visitor Center</u><br/>There is limited space for parking for recreational vehicles and trailers in the parking lot directly in front (south) of the visitor center. RVs are asked to not park in the lot behind the visitor center. There is no parking space for tractor trailers.<br/><u>White Sands National Park is temporarily closed as of Sunday, March 22, 2020.</u><br/>Following guidance from the CDC and recommendations from state and local public health in consultation with NPS Public Health Service officers, White Sands National Park is temporarily closed. This continues to be the most up to date status (6/15/2020).<br/><i><a href=https://www.nps.gov/whsa/planyourvisit/conditions.htm>Alert Information</i></a><br/><a href=https://www.nps.gov/whsa/index.htm>Visit the NPS Website for More Information</a></div>`)[0];
+            popup_447bcc6d471a4c078eaa8d810bfe6417.setContent(html_77ad39422c304dcfa6d1f7478e6bbf46);
+        
+
+        marker_67e4abe550da493aae3b3a0efa1a1583.bindPopup(popup_447bcc6d471a4c078eaa8d810bfe6417)
+        ;
+
+        
+    
+    
+            var marker_8a8846a283e349fbaf68b9feaf8df291 = L.marker(
+                [43.58012365, -103.4394709],
+                {"name": "other"}
+            ).addTo(feature_group_1e31b61cffaf4b0f888af4b48c7c5174);
+        
+    
+            var icon_61ccb817e5184321a20bc2f3feeb84aa = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tree", "iconColor": "white", "markerColor": "orange", "prefix": "fa"}
+            );
+            marker_8a8846a283e349fbaf68b9feaf8df291.setIcon(icon_61ccb817e5184321a20bc2f3feeb84aa);
+        
+    
+        var popup_eb5099b5a1304be18ffd6d1bb43e155b = L.popup({"maxWidth": 500});
+
+        
+            var html_b1b8d46b98a04d73aa459fd6e45604e5 = $(`<div id="html_b1b8d46b98a04d73aa459fd6e45604e5" style="width: 100.0%; height: 100.0%;"><strong><font size="+1">Wind Cave</font></strong><br/><u>Cave Elevators Out of Service, No Tours Being Offered</u><br/>June 2020 - Cave tours are cancelled until further notice due to major elevator repairs. Updated information will be posted on the park website as it becomes available.<br/><i><a href=https://www.nps.govhttps://www.nps.gov/wica/learn/news/07022019pr.htm>Alert Information</i></a><br/><u>Phased reopening - some areas closed due to COVID-19</u><br/>June 2020: We are working to increase access to the park in a phased approach. The cave and visitor center are currently closed. Beginning June 15, Loops A and B in the Elk Mountain Campground will be open. Surface roads and hiking trails remain open.<br/><i><a href=https://www.nps.gov/wica/learn/news/06112020pr.htm>Alert Information</i></a><br/><a href=https://www.nps.gov/wica/index.htm>Visit the NPS Website for More Information</a></div>`)[0];
+            popup_eb5099b5a1304be18ffd6d1bb43e155b.setContent(html_b1b8d46b98a04d73aa459fd6e45604e5);
+        
+
+        marker_8a8846a283e349fbaf68b9feaf8df291.bindPopup(popup_eb5099b5a1304be18ffd6d1bb43e155b)
+        ;
+
+        
+    
+    
+            var marker_70c6755165a34e21abd716ade2c46724 = L.marker(
+                [38.93854526, -77.265089],
+                {"name": "other"}
+            ).addTo(feature_group_1e31b61cffaf4b0f888af4b48c7c5174);
+        
+    
+            var icon_06fec74265614f15bb2474845dec6179 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tree", "iconColor": "white", "markerColor": "orange", "prefix": "fa"}
+            );
+            marker_70c6755165a34e21abd716ade2c46724.setIcon(icon_06fec74265614f15bb2474845dec6179);
+        
+    
+        var popup_1f808bc8ded449f6b171a21b4c77c253 = L.popup({"maxWidth": 500});
+
+        
+            var html_2f42f4f098184fe3a2b8e64a5b36789c = $(`<div id="html_2f42f4f098184fe3a2b8e64a5b36789c" style="width: 100.0%; height: 100.0%;"><strong><font size="+1">Wolf Trap National Park for the Performing Arts</font></strong><br/><u>All public programming suspended indefinitely</u><br/>Following guidance from the CDC and recommendations from state and local public health authorities in consultation with NPS Public Health Service officers, all public programming is suspended until further notice.<br/><u>COVID-19 Update</u><br/>All public restrooms throughout the park and the Ranger Station are closed until further notice to prevent the spread of COVID-19.<br/><i><a href=https://www.nps.gov/wotr/planyourvisit/conditions.htm>Alert Information</i></a><br/><a href=https://www.nps.gov/wotr/index.htm>Visit the NPS Website for More Information</a></div>`)[0];
+            popup_1f808bc8ded449f6b171a21b4c77c253.setContent(html_2f42f4f098184fe3a2b8e64a5b36789c);
+        
+
+        marker_70c6755165a34e21abd716ade2c46724.bindPopup(popup_1f808bc8ded449f6b171a21b4c77c253)
+        ;
+
+        
+    
+    
+            var marker_37a1b9ab51d647d79a9d99f8c02e6c84 = L.marker(
+                [61.4182147, -142.6028439],
+                {"name": "other"}
+            ).addTo(feature_group_1e31b61cffaf4b0f888af4b48c7c5174);
+        
+    
+            var icon_f1795e11f6df4bd69da32db39281b10b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tree", "iconColor": "white", "markerColor": "orange", "prefix": "fa"}
+            );
+            marker_37a1b9ab51d647d79a9d99f8c02e6c84.setIcon(icon_f1795e11f6df4bd69da32db39281b10b);
+        
+    
+        var popup_2ff6b1091ef048b48bf247583f34b075 = L.popup({"maxWidth": 500});
+
+        
+            var html_d0befd9075a54d57b0a7abce54908795 = $(`<div id="html_d0befd9075a54d57b0a7abce54908795" style="width: 100.0%; height: 100.0%;"><strong><font size="+1">Wrangell - St Elias</font></strong><br/><u>Opening Trails in Response to Local Health Guidance</u><br/>Opening the following trails within the Kennecott Mines National Historic Landmark (KNHL) beginning Friday May 22, 2020: • the Erie Mine Trail; • the Root Glacier Trail; • the Bonanza Mine Trail; • the Jumbo Mine Trail.<br/><i><a href=https://www.nps.gov/wrst/learn/news/wrangell-st-elias-national-park-and-preserve-is-adapting-operations-in-response-to-local-health-guidance-opening-trails.htm>Alert Information</i></a><br/><u>The Park Will Maintain Certain Outhouses & Vault Toilets</u><br/>The park will open and maintain certain outhouses and vault toilets on roads and trailheads. Facilities that are open will be maintained in accordance with state and local health guidance (unless otherwise posted) to reduce the transmission of COVID-19.<br/><i><a href=https://www.nps.gov/wrst/learn/news/the-park-will-maintain-certain-outhouses-vault-toilets.htm>Alert Information</i></a><br/><u>Headquarters is CLOSED for administrative business. Call for Information</u><br/>Following guidance from the CDC, State and local public health authorities, the NPS Administrative Office in Copper Center is temporarily closed to the public as of March 24, 2020. For Information about the park, call 907-822-5234 M - F 8 am - 4:30 pm.<br/><i><a href=https://www.nps.gov/wrst/learn/news/wrangell-st-elias-national-park-preserve-is-modifying-operations-to-implement-latest-health-guidance.htm>Alert Information</i></a><br/><u>Kennecott Concentration Mill Stabilization Project Closure</u><br/>Due to the stabilization work, the Mill building will be closed to the public during the project. Other buildings in the NHL will be open and tours of the mill town with the park’s concessioner, St. Elias Alpine Guides (SEAG) will continue to be offered.<br/><i><a href=https://www.nps.gov/wrst/learn/news/alaska-aggregate-products-llc-awarded-contract-for-kennecott-concentration-mill-stabilization-project.htm>Alert Information</i></a><br/><u>Federal Subsistence Fishing Permit Issuance</u><br/>Due to ongoing public health advisories related to Covid-19, the permitting process has been adapted to ensure the safety of permit applicants and park staff.<br/><i><a href=https://www.nps.gov/wrst/learn/news/federal-subsistence-fishing-on-the-upper-copper-river-opens-may-15-permitting-process-adapted-due-to-covid-19.htm>Alert Information</i></a><br/><u>Visitor Services and Operations will be DELAYED</u><br/>Services such as interpretive programs, in-person trip planning, in-person backcountry information, bear resistant food container loans, and public restrooms at the visitor centers are delayed and may resume in these areas on July 1, 2020.<br/><i><a href=https://www.nps.gov/wrst/learn/news/wrangell-st-elias-national-park-and-preserve-is-adapting-operations-in-response-to-local-health-guidance.htm>Alert Information</i></a><br/><u>Adapting park operations -  limited services and closures</u><br/>The following park facilities are closed: Kendesnii Campground and Esker, Caribou, Viking, & Nugget cabins.  Building access in the Kennecott Mines NHL are available by guided tour only.<br/><u>Authorized Park Concessionaires List Has Changed</u><br/>The list of authorized concessionaires for Wrangell-St. Elias has recently changed. PLEASE check the park's list of all concessions authorized to provide sport hunting services in the park BEFORE hiring a service. Click "more" for this list:<br/><i><a href=https://www.nps.gov/locations/alaska/services-wrangell-st-elias.htm>Alert Information</i></a><br/><u>The health and safety of visitors, employees, and partners is our number one priority.</u><br/>The NPS is closely monitoring the situation related to the coronavirus (COVID-19). Visitors can be assured that national parks continue to maintain high standards related to the health and wellness of staff and visitors. Refer to CDC Health Guidelines.<br/><i><a href=https://www.nps.gov/aboutus/news/public-health-update.htm>Alert Information</i></a><br/><u>Update on working with park partners including concessioners, commercial operators and leaseholders</u><br/>NPS appreciates that partners are working in cooperation with their park managers to address the rapidly evolving situation associated with the coronavirus (COVID-19) to ensure guest, customer and employee safety and to provide accurate communications.<br/><i><a href=https://www.nps.gov/subjects/partnerships/publichealthforpartners.htm>Alert Information</i></a><br/><a href=https://www.nps.gov/wrst/index.htm>Visit the NPS Website for More Information</a></div>`)[0];
+            popup_2ff6b1091ef048b48bf247583f34b075.setContent(html_d0befd9075a54d57b0a7abce54908795);
+        
+
+        marker_37a1b9ab51d647d79a9d99f8c02e6c84.bindPopup(popup_2ff6b1091ef048b48bf247583f34b075)
+        ;
+
+        
+    
+    
+            var marker_707cb63db1ef48b5b1ef740a5aa2813a = L.marker(
+                [37.84883288, -119.5571873],
+                {"name": "other"}
+            ).addTo(feature_group_1e31b61cffaf4b0f888af4b48c7c5174);
+        
+    
+            var icon_b26fc2649e3140b08edfd7c8b0630f08 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tree", "iconColor": "white", "markerColor": "orange", "prefix": "fa"}
+            );
+            marker_707cb63db1ef48b5b1ef740a5aa2813a.setIcon(icon_b26fc2649e3140b08edfd7c8b0630f08);
+        
+    
+        var popup_0783c228a9e246b685310b32f2aa71b8 = L.popup({"maxWidth": 500});
+
+        
+            var html_1a2086cd02f24286badb3156e1be279a = $(`<div id="html_1a2086cd02f24286badb3156e1be279a" style="width: 100.0%; height: 100.0%;"><strong><font size="+1">Yosemite</font></strong><br/><u>Phased reopening: Yosemite is open with reservations required due to COVID-19</u><br/>We are working to increase access to the park in a phased approach. Yosemite National Park is open with limited services and facilities to those with day-use reservations, reservations for in-park lodging or camping, and wilderness or Half Dome permits.<br/><i><a href=https://www.nps.gov/yose/planyourvisit/covid19.htm>Alert Information</i></a><br/><u>Tioga Road (Hwy 120 through the park) opens on Monday, June 15 at 9 am</u><br/>The Tioga Road (Highway 120 through the park) is closed. The road will open on June 15 at 9 am, conditions permitting. A reservation is required to drive on Tioga Road.<br/><i><a href=https://www.nps.gov/yose/planyourvisit/wroads.htm>Alert Information</i></a><br/><a href=https://www.nps.gov/yose/index.htm>Visit the NPS Website for More Information</a></div>`)[0];
+            popup_0783c228a9e246b685310b32f2aa71b8.setContent(html_1a2086cd02f24286badb3156e1be279a);
+        
+
+        marker_707cb63db1ef48b5b1ef740a5aa2813a.bindPopup(popup_0783c228a9e246b685310b32f2aa71b8)
+        ;
+
+        
+    
+    
+            var marker_03317e40ea04408c91561563fe683d00 = L.marker(
+                [37.29839254, -113.0265138],
+                {"name": "other"}
+            ).addTo(feature_group_1e31b61cffaf4b0f888af4b48c7c5174);
+        
+    
+            var icon_d404c9206a03442ebd8c0230c8e1763e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tree", "iconColor": "white", "markerColor": "orange", "prefix": "fa"}
+            );
+            marker_03317e40ea04408c91561563fe683d00.setIcon(icon_d404c9206a03442ebd8c0230c8e1763e);
+        
+    
+        var popup_1076121c611c4799a660226cf8cff57b = L.popup({"maxWidth": 500});
+
+        
+            var html_b46b6eb15e804c5a93e1bdc5b5e92c01 = $(`<div id="html_b46b6eb15e804c5a93e1bdc5b5e92c01" style="width: 100.0%; height: 100.0%;"><strong><font size="+1">Zion</font></strong><br/><u>Limited Resumption of Operations - Some Park Areas Available</u><br/>Shuttles are not operating. Parking is extremely limited and Scenic Drive will be closed when all parking is full. Kolob Canyons is closed. Have alternate plans in the area if parking is full. For full details on park operations, follow the link.<br/><i><a href=https://www.nps.gov/zion/planyourvisit/limited-resumption-of-operations.htm>Alert Information</i></a><br/><u>Fire Restrictions Are In Effect Throughout Zion National Park</u><br/>Effective June 1, 2020, Fire Restrictions are in effect throughout Zion National Park; Campfires are prohibited Watchman Campground and Zion Canyon.<br/><i><a href=https://www.nps.gov/zion/learn/news/fire-restrictions-implemented-in-zion-national-park-campfires-prohibited-in-zion-canyon.htm>Alert Information</i></a><br/><u>How Will COVID-19 Affect My Visit?</u><br/>The Zion Canyon Scenic Drive is closed to private vehicles for most of the day while all parking is full. Visitors should have flexible alternate plans for getting to trailheads or visiting other areas. Follow the link for more info.<br/><i><a href=https://www.nps.gov/zion/planyourvisit/how-will-covid-19-affect-my-visit.htm>Alert Information</i></a><br/><u>Construction on State Route 9 from Mt. Carmel Junction (Hwy 89) toward the East Entrance of Zion</u><br/>Road construction on SR9 will cause delays with lanes closures, shifts, and one-way traffic between 7 a.m. and 7 p.m. Monday - Friday through approximately July 15th. The project will level and repair 8 miles of SR9.<br/><a href=https://www.nps.gov/zion/index.htm>Visit the NPS Website for More Information</a></div>`)[0];
+            popup_1076121c611c4799a660226cf8cff57b.setContent(html_b46b6eb15e804c5a93e1bdc5b5e92c01);
+        
+
+        marker_03317e40ea04408c91561563fe683d00.bindPopup(popup_1076121c611c4799a660226cf8cff57b)
+        ;
+
+        
+    
+    
+            var feature_group_c4b805e435de44de9adcbffbeb990ec4 = L.featureGroup(
+                {}
+            ).addTo(map_12ffd943db8043e1832581751bd003f2);
+        
+    
+            var layer_control_1a8f4b0c057143889206849d2169925e = {
+                base_layers : {
+                    "stamenterrain" : tile_layer_47da71ebaa8c49109fa8ce5c12bf9bbd,
+                },
+                overlays :  {
+                    "Open" : feature_group_0f4edcbc20f0469eac6b492c3bd7c3a8,
+                    "Other" : feature_group_1e31b61cffaf4b0f888af4b48c7c5174,
+                    "Closed" : feature_group_c4b805e435de44de9adcbffbeb990ec4,
+                },
+            };
+            L.control.layers(
+                layer_control_1a8f4b0c057143889206849d2169925e.base_layers,
+                layer_control_1a8f4b0c057143889206849d2169925e.overlays,
+                {"autoZIndex": true, "collapsed": true, "position": "topright"}
+            ).addTo(map_12ffd943db8043e1832581751bd003f2);
+        
+</script>
